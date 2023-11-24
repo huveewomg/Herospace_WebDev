@@ -1,0 +1,66 @@
+/*Default classes*/
+
+body {
+  background-image: url("assets/img/cover.jpg");
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #519E8A;
+  font-size: 80px;
+  font-family: 'Roboto Condensed';
+  font-weight: 900;
+  padding-left: 10%;
+  padding-top: 12%;
+}
+
+h2 {
+  padding-left: 10%;
+  color: aliceblue;
+}
+
+/*Classes*/
+
+/*ID*/
+#enterBt {
+    margin-left: 10%;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    width: 110px;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: 'Roboto Condensed';
+}   
+
+#enterBt span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #enterBt span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #enterBt:hover span {
+    padding-right: 20px;
+  }
+  
+  #enterBt:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
