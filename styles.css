@@ -1,66 +1,135 @@
 /*Default classes*/
 
-body {
-  background-image: url("assets/img/cover.jpg");
-  background-repeat: no-repeat;
-  overflow-x: hidden;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #319f82;
+  background-image: url('assets/img/cover.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover; /* This property ensures that the background image covers the entire pseudo-element */
+  clip-path: polygon(100% 100% , 100% 0%, 20% 100% , 0% 100% );
+  z-index: -1; /* Place the pseudo-element below the content */
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 0, 0, 0.5); /* Add your desired overlay color and adjust the opacity if needed */
+  clip-path: polygon(0% 0%, 0% 125%, 100% 0%, 100% 0%);
+  z-index: -1;
+}
+
+/* Additional styling for the content */
+.content {
+  z-index: 1; /* Place the content above the pseudo-element */
+  position: relative;
+  /* Add your additional styles for the content here */
 }
 
 h1 {
-  color: #519E8A;
+  color: #319f82;
   font-size: 80px;
-  font-family: 'Roboto Condensed';
+  font-family: "auraregular";
   font-weight: 900;
   padding-left: 10%;
-  padding-top: 12%;
+  padding-top: 10%;
 }
 
 h2 {
+  margin-top: -2.5rem;
+  margin-bottom: 5rem;
   padding-left: 10%;
-  color: aliceblue;
+  color: black;
+  font-family:'Roboto', sans-serif;
+}
+
+/*Fonts*/
+@font-face {
+  font-family: "auraregular";
+  src: url("fonts/aura_regular-webfont.woff2") format("woff2"),
+    url("fonts/aura_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'smooch_sansthin';
+  src: url('fonts/smoochsans-variablefont_wght-webfont.woff2') format('woff2'),
+       url('fonts/smoochsans-variablefont_wght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 /*Classes*/
 
+
 /*ID*/
 #enterBt {
-    margin-left: 10%;
-    vertical-align: middle;
-    display: inline-block;
-    border-radius: 15px;
-    background-color: #000000;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 16px;
-    padding: 20px;
-    width: 110px;
-    transition: all 0.5s;
-    cursor: pointer;
-    font-family: 'Roboto Condensed';
-}   
+  margin-left: 10%;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 15px;
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: "Roboto Condensed";
+}
 
 #enterBt span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  #enterBt span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  #enterBt:hover span {
-    padding-right: 20px;
-  }
-  
-  #enterBt:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#enterBt span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#enterBt:hover span {
+  padding-right: 20px;
+}
+
+#enterBt:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#logo{
+  position: absolute;
+  padding-left: 10%;
+  font-family: "Roboto Condensed";
+}
+
+#stats{
+  width: 20rem;
+  height: 15rem;
+  background-color:aqua;
+  margin-left: 65rem;
+  margin-top: -5rem;
+  text-align: center;
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  padding-top: 10px;
+}
+
+
