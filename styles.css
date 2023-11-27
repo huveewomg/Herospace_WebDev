@@ -114,6 +114,14 @@ h2 {
   right: 0;
 }
 
+#hero-text{
+  height: 20px;
+  display:inline-block;
+  background-color: linear-gradient(to top, #ff0000, #00ff00);
+  background-size: 100% 200%; 
+  background-position: bottom;
+}
+
 #logo{
   position: absolute;
   padding-left: 10%;
@@ -122,14 +130,20 @@ h2 {
 
 #stats{
   width: 20rem;
-  height: 15rem;
-  background-color:aqua;
-  margin-left: 65rem;
-  margin-top: -5rem;
-  text-align: center;
-  justify-content: center;
-  font-family: "Roboto Condensed";
-  padding-top: 10px;
+  height: 19rem;
+  margin-left: 70rem;
+  margin-top: -10rem;
+  text-align: left;
+  font-family: "auraregular";
+  background-color: white;
+  padding-left: 2rem ;
+  padding-top: 1px ;
 }
+
+#stat-title{
+  font-size:35px;
+}
+
+
 
 
