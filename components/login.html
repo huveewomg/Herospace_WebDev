@@ -8,22 +8,25 @@
 </head>
 
 <body>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img src="https://picsum.photos/200/300">
-        </div>
-        
-        <div class="mySlides fade">
-          <img src="https://picsum.photos/200/300">
-        </div>
-        
-        <div class="mySlides fade">
-          <img src="https://picsum.photos/200/300">
-        </div>
-        <div>
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+            <img src="https://picsum.photos/200/300">
+            </div>
+            
+            <div class="mySlides fade">
+            <img src="https://picsum.photos/200/300">
+            </div>
+            
+            <div class="mySlides fade">
+            <img src="https://picsum.photos/200/300">
+            </div>
+            
+            <div>
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
         </div>
     </div>
 
@@ -32,14 +35,31 @@
             <h2>Login</h2>
             <form action="#">
                 <div class="input-box">
-                    <span class="icon">img</span>
+                    <span class="icon">
+                        <img src="/assets/img/mail.svg" alt="">
+                    </span>
                     <input type="email" required>
                     <label>Email</label>
                 </div>
+                
                 <div class="input-box">
-                    <span class="icon"></span>
+                    <span class="icon">
+                        <img src="/assets/img/lock-closed.svg" alt="">
+                    </span>
                     <input type="password" required>
                     <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forget Password?</a>
+                </div>
+
+                <button type="submit" class="bt">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account ?
+                        <a href="#" class="register-link">Register</a></p>
                 </div>
         </div>
     </div>
