@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    background-image: url();
+    /* background-image: url(https://i.pinimg.com/originals/f8/62/f9/f862f9d6e7c98afb8fa09d5e0684516f.png); */
 }
 
 body {
@@ -15,8 +15,9 @@ div{
 }
 
 img {
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
+    background-size: 100% 100%;
     float: left;
     }
 
@@ -38,13 +39,13 @@ div span img{
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: yellow;
+  background: green;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
   position: relative;
-  top: 750px;
-  right: 425px;
+  top: 98vh;
+  right: 32vw;
 }
 
 .active {
@@ -69,12 +70,16 @@ div span img{
 
 .wrapper {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 440px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, .5);
   border-radius: 20px;
   backdrop-filter: blur(20px);
-  padding-left: 300px;
-  padding-top: 200px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30vh;
+  left: 5vw;
 }
