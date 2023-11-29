@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    /* background-image: url(https://i.pinimg.com/originals/f8/62/f9/f862f9d6e7c98afb8fa09d5e0684516f.png); */
 }
 
 body {
@@ -8,18 +9,23 @@ body {
     padding: 0;
 }
 
-.mySlides {
-    display: none;
+/* allow both image and login side by side */
+div{
+  float: left;
 }
 
-div.class.img {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100vw;
+img {
+    width: 60vw;
     height: 100vh;
+    background-size: 100% 100%;
+    float: left;
     }
 
+/* logo img both email and password */
+div span img{
+  height: 10%;
+  width: 10%;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -33,13 +39,13 @@ div.class.img {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background: green;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
   position: relative;
-  left: 200px;
-  bottom: 20px;
+  top: 98vh;
+  right: 32vw;
 }
 
 .active {
@@ -60,4 +66,20 @@ div.class.img {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30vh;
+  left: 5vw;
 }
