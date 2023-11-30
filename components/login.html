@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herospace</title>
+    <link rel="stylesheet" href="Loginstyle.css">
 </head>
+
 <body>
-    Testing
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+            <img src="https://cdn.worldofbuzz.com/wp-content/uploads/2023/03/collage-5-2.jpg?strip=all&lossy=1&quality=92&ssl=1">
+            </div>
+            
+            <div class="mySlides fade">
+            <img src="https://media.freemalaysiatoday.com/wp-content/uploads/2023/05/372fa82b-air-kelantan-bernama-100523.jpg">
+            </div>
+            <div class="mySlides fade">
+            <img src="https://clips.mstar.com.my/images/blob/02E42499-562B-40DA-89E6-8CDA233298A7">
+            </div>
+            
+            <div style="background: transparent;">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <img src="/assets/img/mail.svg" alt="">
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                
+                <div class="input-box">
+                    <span class="icon">
+                        <img src="/assets/img/lock-closed.svg" alt="">
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                    Remember me</label>
+                    <a href="#">Forget Password?</a>
+                </div>
+
+                <button type="submit" class="bt">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account ?
+                        <a href="#" class="register-link">Register</a></p>
+                </div>
+        </div>
+    </div>
+        
+
+
+    <script src="script.js"></script>
 </body>
 </html>
