@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    /* background-image: url(https://i.pinimg.com/originals/f8/62/f9/f862f9d6e7c98afb8fa09d5e0684516f.png); */
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* allow both image and login side by side */
+div{
+  float: left;
+}
+
+img {
+    width: 60vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    float: left;
+    }
+
+/* logo img both email and password */
+div span img{
+  height: 10%;
+  width: 10%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100vw;
+  position: relative;
+  text-align: left;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background: green;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  top: 98vh;
+  right: 32vw;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30vh;
+  left: 5vw;
+}

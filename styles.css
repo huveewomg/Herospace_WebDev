@@ -39,7 +39,7 @@ h1 {
   font-family: "auraregular";
   font-weight: 900;
   padding-left: 10%;
-  padding-top: 10%;
+  padding-top: 5rem;
 }
 
 h2 {
@@ -72,7 +72,7 @@ h2 {
 
 
 /*ID*/
-#enterBt {
+#loginBt {
   margin-left: 10%;
   vertical-align: middle;
   display: inline-block;
@@ -83,20 +83,20 @@ h2 {
   text-align: center;
   font-size: 16px;
   padding: 20px;
-  width: 110px;
+  width: 7rem;
   transition: all 0.5s;
   cursor: pointer;
   font-family: "Roboto Condensed";
 }
 
-#enterBt span {
+#loginBt span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-#enterBt span:after {
+#loginBt span:after {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -105,31 +105,110 @@ h2 {
   transition: 0.5s;
 }
 
-#enterBt:hover span {
+#loginBt:hover span {
   padding-right: 20px;
 }
 
-#enterBt:hover span:after {
+#loginBt:hover span:after {
   opacity: 1;
   right: 0;
 }
 
-#logo{
-  position: absolute;
-  padding-left: 10%;
+#guestBt {
+  margin-left: 5%;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 15px;
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 15rem;
+  transition: all 0.5s;
+  cursor: pointer;
   font-family: "Roboto Condensed";
+}
+
+#guestBt span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#guestBt span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#guestBt:hover span {
+  padding-right: 20px;
+}
+
+#guestBt:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#hero-text{
+  height: 20px;
+  display:inline-block;
+  background-color: linear-gradient(to top, #ff0000, #00ff00);
+  background-size: 100% 200%; 
+  background-position: bottom;
+}
+
+#logo{
+  float: right;
+  margin-right: 5rem;
+  z-index: -1;
+  width: 10rem;
+}
+
+#logo:hover{
+  cursor: pointer;
 }
 
 #stats{
   width: 20rem;
-  height: 15rem;
-  background-color:aqua;
-  margin-left: 65rem;
-  margin-top: -5rem;
-  text-align: center;
-  justify-content: center;
-  font-family: "Roboto Condensed";
-  padding-top: 10px;
+  height: 19rem;
+  margin: -3rem 0rem 0rem 70rem;
+  text-align: left;
+  font-family: "auraregular";
+  background-color: white;
+  padding-left: 2rem ;
+  padding-top: 1px ;
+  border-style: solid;
+  border-width: 0.5rem;
 }
+
+
+
+#stats-title{
+  width: 22rem;
+  height: 5rem;
+  margin: -10rem 0rem 5rem 70rem;
+  text-align: left;
+  font-family: "auraregular";
+  background-color: white;
+  border-style: solid;
+  border-width: 0.5rem;
+  justify-content: center;
+  align-items: centers;
+  text-align: center;
+}
+
+#stats-title-p{
+  font-size: 40px;
+  margin-top: 1rem;
+}
+
+
 
 
