@@ -11,14 +11,14 @@
 <body>
     <div class="container">
         <div class="slideshow-container">
-            <div class="mySlides fade">
-            <img src="https://cdn.worldofbuzz.com/wp-content/uploads/2023/03/collage-5-2.jpg?strip=all&lossy=1&quality=92&ssl=1">
+            <div class="mySlides">
+            <img src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/UHEUMBOZ3JNKPDFPX3IEPHOPCI.jpg">
             </div>
-            <div class="mySlides fade"> 
-            <img src="https://media.freemalaysiatoday.com/wp-content/uploads/2023/05/372fa82b-air-kelantan-bernama-100523.jpg">
+            <div class="mySlides"> 
+            <img src="https://www.undp.org/sites/g/files/zskgke326/files/migration/bb/undp-bb-kalinago-forestday-DSC_8672.jpg">
             </div>
-            <div class="mySlides fade">
-            <img src="https://clips.mstar.com.my/images/blob/02E42499-562B-40DA-89E6-8CDA233298A7">
+            <div class="mySlides">
+            <img src="https://www.cityofcarrollton.com/home/showpublishedimage/25204/637812153581200000">
             </div>
             
             <div style="background: transparent;">
@@ -29,7 +29,12 @@
         </div>
     </div>
 
+    <div class="split"></div>
     <div class="wrapper">
+            <span class="close-icon">
+                close
+                </span>
+
         <div class="form-box login">
             <h2>Login</h2>
             <form action="#">
@@ -49,7 +54,7 @@
                     <label>Password</label>
                 </div>
 
-                <div class="T&C">
+                <div class="TC">
                     <label><input type="checkbox">
                     I agree to the</label>
                     <a href="#">Term and Conditions</a>
@@ -60,7 +65,62 @@
                     <p>New User ?
                         <a href="#" class="register-link">Register</a></p>
                 </div>
+            </form>
         </div>
+
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="person-icon">
+                        person
+                        </span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="material-symbols-outlined">
+                        mail
+                        </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="material-symbols-outlined">
+                        lock
+                        </span>
+                    <input type="password" id='password' required>
+                    <label>Password</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="material-symbols-outlined">
+                        lock
+                        </span>
+                    <input type="password" id='cpassword' required>
+                    <label>Confirm Password</label>
+                </div>
+
+                <div class="message">
+                    <p id="message"></p>
+                </div>
+
+                <div class="T&C">
+                    <label><input type="checkbox">
+                    I agree to the</label>
+                    <a href="#">Term and Conditions</a>
+                </div>
+
+                <button type="submit" onclick="CheckPassword()" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account ?
+                        <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+
     </div>
         
 
