@@ -7,11 +7,9 @@ body::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #319f82;
-  background-image: url('assets/img/cover.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
-  background-size: cover; /* This property ensures that the background image covers the entire pseudo-element */
-  clip-path: polygon(100% 100% , 100% 0%, 20% 100% , 0% 100% );
-  z-index: -1; /* Place the pseudo-element below the content */
+  background-image: url('assets/img/cover.jpg'); 
+  background-size: cover; 
+  z-index: -1; 
 }
 
 body::after {
@@ -21,31 +19,26 @@ body::after {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 0, 0, 0.5); /* Add your desired overlay color and adjust the opacity if needed */
-  clip-path: polygon(0% 0%, 0% 125%, 100% 0%, 100% 0%);
+  background-color: #81E4DA; /* Add your desired overlay color and adjust the opacity if needed */
+  /* clip-path: polygon(0% 0%, 0% 125%, 100% 0%, 100% 0%); */
+  clip-path: polygon(0% 0%, 0% 180%, 100% 0%, 100% 0%);
   z-index: -1;
 }
 
-/* Additional styling for the content */
-.content {
-  z-index: 1; /* Place the content above the pseudo-element */
-  position: relative;
-  /* Add your additional styles for the content here */
-}
-
 h1 {
-  color: #319f82;
+  color: rgb(215, 67, 131);
   font-size: 80px;
   font-family: "auraregular";
   font-weight: 900;
-  padding-left: 10%;
-  padding-top: 5rem;
+  padding-top: 10vh;
+  margin-top: 15vh;
+  margin-left: 20vh;
 }
 
 h2 {
-  margin-top: -2.5rem;
-  margin-bottom: 5rem;
-  padding-left: 10%;
+  margin-top: -5vh;
+  margin-bottom: 5vh;
+  margin-left: 20vh;
   color: black;
   font-family:'Roboto', sans-serif;
 }
@@ -73,7 +66,8 @@ h2 {
 
 /*ID*/
 #loginBt {
-  margin-left: 10%;
+  margin-top: 10vh;
+  margin-left: 20vh;
   vertical-align: middle;
   display: inline-block;
   border-radius: 15px;
@@ -82,8 +76,8 @@ h2 {
   color: #ffffff;
   text-align: center;
   font-size: 16px;
-  padding: 20px;
-  width: 7rem;
+  padding: 2vh;
+  width: 12vh;
   transition: all 0.5s;
   cursor: pointer;
   font-family: "Roboto Condensed";
@@ -115,7 +109,8 @@ h2 {
 }
 
 #guestBt {
-  margin-left: 5%;
+  margin-top: 10vh;
+  margin-left: 10vh;
   vertical-align: middle;
   display: inline-block;
   border-radius: 15px;
@@ -124,7 +119,7 @@ h2 {
   color: #ffffff;
   text-align: center;
   font-size: 16px;
-  padding: 20px;
+  padding: 2vh;
   width: 15rem;
   transition: all 0.5s;
   cursor: pointer;
@@ -157,8 +152,8 @@ h2 {
 }
 
 #hero-text{
-  height: 20px;
-  display:inline-block;
+  height: 10vh;
+  display: inline-block;
   background-color: linear-gradient(to top, #ff0000, #00ff00);
   background-size: 100% 200%; 
   background-position: bottom;
@@ -166,47 +161,48 @@ h2 {
 
 #logo{
   float: right;
-  margin-right: 5rem;
+  margin-top: -12vh;
+  margin-right: 5vh;
   z-index: -1;
-  width: 10rem;
+  width: 20vh;
 }
 
 #logo:hover{
   cursor: pointer;
 }
 
-#stats{
-  width: 20rem;
-  height: 19rem;
-  margin: -3rem 0rem 0rem 70rem;
-  text-align: left;
-  font-family: "auraregular";
-  background-color: white;
-  padding-left: 2rem ;
-  padding-top: 1px ;
-  border-style: solid;
-  border-width: 0.5rem;
-}
-
-
-
 #stats-title{
-  width: 22rem;
-  height: 5rem;
-  margin: -10rem 0rem 5rem 70rem;
+  width: 42vh;
+  height: 10vh;
+  margin: -20vh 20vh 0vh 0vh;
+  float: right;
   text-align: left;
   font-family: "auraregular";
   background-color: white;
   border-style: solid;
-  border-width: 0.5rem;
+  border-width: 1vh;
   justify-content: center;
-  align-items: centers;
+  align-items: center;
   text-align: center;
 }
 
 #stats-title-p{
   font-size: 40px;
   margin-top: 1rem;
+}
+
+#stats{
+  width: 40vh;
+  height: 40vh;
+  margin: -5vh 20vh 0vh 0vh;
+  float: right;
+  text-align: left;
+  font-family: "auraregular";
+  background-color: white;
+  padding-left: 2vh ;
+  padding-top: 0.5vh ;
+  border-style: solid;
+  border-width: 1vh;
 }
 
 
