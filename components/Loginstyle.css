@@ -137,6 +137,7 @@ div{
 /* after pressing register */
 .wrapper.active{
   height:690px;
+  transform: translateY(-100px);
 }
 
 .wrapper .form-box{
