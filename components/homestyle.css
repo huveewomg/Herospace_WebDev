@@ -27,18 +27,22 @@ body {
 }
 
 /*Classes*/
-<<<<<<< Updated upstream
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
 .dropdown-content {
+  width: 15vh;
+  padding: 10px 10px 5px 10px;
+  list-style: none;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  margin-left: -4vh;
+  margin-top: 2vh;
 }
 
 .dropdown:hover .dropdown-content {
@@ -51,8 +55,10 @@ body {
   display: block;
 }
 
-=======
->>>>>>> Stashed changes
+.dropdown:hover > a .fa-caret-down {
+  display: none;
+}
+
 
 /*ID*/
 #container {
@@ -61,11 +67,7 @@ body {
   background-color: black;
   box-shadow: -2px -2px 5px white, 2px -2px 5px white;
 }
-<<<<<<< Updated upstream
 #container > nav {
-=======
-#nav{
->>>>>>> Stashed changes
   font-family: "auraregular";
   letter-spacing: 1px;
   width: 100%;
@@ -90,11 +92,7 @@ body {
   height: 80%;
 }
 
-<<<<<<< Updated upstream
 #container > nav > ul {
-=======
-#container-nav-ul {
->>>>>>> Stashed changes
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -102,7 +100,7 @@ body {
   text-align: center;
   margin-left: -15%;
 }
-#container-nav-ul-li {
+#container > nav > ul >li {
   line-height: 60px;
   margin: 0 0px;
   padding: 0;
@@ -112,7 +110,7 @@ body {
   /*   background-color:green; */
   min-width: 120px;
 }
-#container-nav-ul-li-a {
+#container > nav > ul > li >a {
   position: relative;
   /*   background-color:red; */
   margin: 0 20px;
@@ -130,9 +128,7 @@ body {
   display: block;
   margin-left: -1vh;
 }
-.dropdown:hover > a .fa-caret-down {
-  display: none;
-}
+
 a {
   text-decoration: none;
 }
@@ -203,6 +199,12 @@ cursor: pointer;
 
 #profile-logo{
   font-size: 60px;
+}
+
+#profile-caret{
+  margin-top: 100px;
+  background-color: black;
+  height: 100px;
 }
 
 
