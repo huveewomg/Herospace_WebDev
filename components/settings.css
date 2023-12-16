@@ -248,21 +248,24 @@ a {
 }
 
 #profile-pic-column{
-  width:20%;
+  width: 20%;
   height: 100%;
+  font-family: "auraregular";
+  font-size: larger;
 }
 
 #profile-pic{
-  width: 30%;
-  height: 50%;
+  width: 100px;
+  height: 100px;
   float: left;
   background-color: black;
   border-radius: 50%;
 }
 
 #profile-img{
-  width: 90px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 #name-column{
@@ -292,7 +295,7 @@ a {
 }
 
 #bio-row{
-  margin-top: 10vh;
+  margin-top: 20vh;
 }
 
 
