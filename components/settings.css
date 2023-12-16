@@ -245,9 +245,55 @@ a {
 }
 
 #profile-pic-row{
+}
+
+#profile-pic-column{
+  width:20%;
+  height: 100%;
+}
+
+#profile-pic{
+  width: 30%;
+  height: 50%;
+  float: left;
+  background-color: black;
+  border-radius: 50%;
+}
+
+#profile-img{
+  width: 90px;
+  height: 50px;
+}
+
+#name-column{
+  width: 80%;
+  height: 50%;
+  float: right;
+}
+
+#name{
   height: 50%;
 }
 
-#bio-row{
+#age-column{
+  width: 80%;
   height: 50%;
+  float: right;
 }
+
+#age{
+  width: 30%;
+  float: left ;
+}
+
+#state{
+  float: right;
+  width: 30%;
+}
+
+#bio-row{
+  margin-top: 10vh;
+}
+
+
+

@@ -140,9 +140,9 @@ elseif(isset($_POST['registerEmail'])) {
                     <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
-
+                
                 <div class="TC">
-                    <label><input type="checkbox">
+                    <label><input type="checkbox" required>
                         I agree to the</label>
                     <a href="#">Term and Conditions</a>
                 </div>
