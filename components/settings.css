@@ -17,6 +17,10 @@ hr{
   width: 90%;
 }
 
+h2{
+  margin-bottom: 5vh;
+}
+
 /*Fonts*/
 @font-face {
   font-family: "auraregular";
@@ -87,10 +91,11 @@ hr{
   list-style-type: none;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: right;
   text-align: center;
-  margin-left: -15%;
+  margin-left: -11%;
 }
+
 #container > nav > ul > li {
   line-height: 60px;
   margin: 0 0px;
@@ -192,10 +197,10 @@ a {
 #profile-logo-container {
   margin-top: 1vh;
   margin-bottom: 1vh;
+  margin-left: 50vh;
   width: 9vh;
   height: 9vh;
   border-radius: 50%;
-  margin-left: 40vh;
   text-align: center;
   float: right;
   background-color: white;
