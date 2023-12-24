@@ -17,7 +17,11 @@ hr{
   width: 90%;
 }
 
+<<<<<<< Updated upstream
 h2{
+=======
+p{
+>>>>>>> Stashed changes
   margin-bottom: 5vh;
 }
 
@@ -242,7 +246,7 @@ a {
 
 #sidebar{
   margin-left: 5vh;
-  margin-top: 30vh;
+  margin-top: 25vh;
 }
 
 #profile-info{
@@ -280,6 +284,7 @@ a {
 }
 
 #name{
+  margin-top: -8vh;
   height: 50%;
 }
 
@@ -291,7 +296,7 @@ a {
 
 #age{
   width: 30%;
-  float: left ;
+  float: left;
 }
 
 #state{
@@ -300,7 +305,7 @@ a {
 }
 
 #bio-row{
-  margin-top: 20vh;
+  margin-top: 25vh;
 }
 
 
