@@ -17,13 +17,6 @@ hr{
   width: 90%;
 }
 
-<<<<<<< Updated upstream
-h2{
-=======
-p{
->>>>>>> Stashed changes
-  margin-bottom: 5vh;
-}
 
 /*Fonts*/
 @font-face {
@@ -281,10 +274,11 @@ a {
   width: 80%;
   height: 50%;
   float: right;
+  margin-bottom: 3vh;
 }
 
 #name{
-  margin-top: -8vh;
+  margin-top: -3vh;
   height: 50%;
 }
 
@@ -295,7 +289,7 @@ a {
 }
 
 #age{
-  width: 30%;
+  width: 35%;
   float: left;
 }
 
@@ -307,6 +301,19 @@ a {
 #bio-row{
   margin-top: 25vh;
 }
+
+#sidebar-p{
+  margin-bottom: 5vh;
+}
+
+#sidebar-p:hover{
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  width: 37vh;
+  padding: 2px;
+}
+
 
 
 
