@@ -9,14 +9,13 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-hr{
+hr {
   margin-top: 3vh;
   margin-bottom: 3vh;
   height: 3px;
   background-color: black;
   width: 90%;
 }
-
 
 /*Fonts*/
 @font-face {
@@ -237,26 +236,26 @@ a {
   box-sizing: border-box;
 }
 
-#sidebar{
+#sidebar {
   margin-left: 5vh;
   margin-top: 25vh;
 }
 
-#profile-info{
+#profile-info {
   margin-top: 5vh;
 }
 
-#profile-pic-row{
+#profile-pic-row {
 }
 
-#profile-pic-column{
+#profile-pic-column {
   width: 20%;
   height: 100%;
   font-family: "auraregular";
   font-size: larger;
 }
 
-#profile-pic{
+#profile-pic {
   width: 100px;
   height: 100px;
   float: left;
@@ -264,56 +263,97 @@ a {
   border-radius: 50%;
 }
 
-#profile-img{
+#profile-img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
 
-#name-column{
+#name-column {
   width: 80%;
   height: 50%;
   float: right;
   margin-bottom: 3vh;
 }
 
-#name{
+#name {
   margin-top: -3vh;
   height: 50%;
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
 }
 
-#age-column{
+#age-column {
   width: 80%;
   height: 50%;
   float: right;
 }
 
-#age{
+#age {
   width: 35%;
   float: left;
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
 }
 
-#state{
+#gender{
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+}
+
+#state {
   float: right;
   width: 30%;
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
 }
 
-#bio-row{
+#bio-row {
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
   margin-top: 25vh;
 }
 
-#sidebar-p{
-  margin-bottom: 5vh;
+#bio-textarea {
+  width: 90%;
+  border-width: 2px;
+  border-color: black;
+  resize: none;
+  padding: 5px;
 }
 
-#sidebar-p:hover{
-  cursor: pointer;
-  color: white;
-  background-color: black;
-  width: 37vh;
+#sidebar-p {
+  margin-top: 0.5vh;
+  margin-bottom: 5vh;
+  margin-left: 2vh;
   padding: 2px;
 }
 
+#sidebar-p:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  width: 25vh;
+  padding: 2px;
+}
 
+#submit-button {
+  margin-right: 14vh;
+  float: right;
+  background-color: #000000; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size of the text */
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+  border: 2px solid black;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
 
-
+#submit-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid black;
+}

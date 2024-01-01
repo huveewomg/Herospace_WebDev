@@ -246,9 +246,13 @@
     margin-top: 25vh;
   }
   
-  #sidebar-p{
+  #sidebar-p {
+    margin-top: 0.5vh;
     margin-bottom: 5vh;
+    margin-left: 2vh;
+    padding: 2px;
   }
+  
   
   #sidebar-p:hover{
     cursor: pointer;
@@ -258,15 +262,24 @@
     padding: 2px;
   }
 
-  #confirm-button{
+  #confirm-button {
     margin-top: -3vh;
-    padding: 8px;
-    border-radius: 20%;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    background-color: #000000;
+    background-color: #000000; /* Green background color */
+    color: white; /* White text color */
+    padding: 8px 15px; /* Padding for the button */
+    font-size: 14px; /* Font size of the text */
     font-family: "auraregular";
-
+    letter-spacing: 0.5px;
+    border: 2px solid black;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  #confirm-button:hover {
+    color: #000000;
+    background-color: #ffffff;
+    border: 2px solid black;
   }
   
   
