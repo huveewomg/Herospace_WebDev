@@ -61,6 +61,33 @@
   </head>
 
   <body>
-    
+    <div style="position: relative;">
+      <img id="home-cover" src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/UHEUMBOZ3JNKPDFPX3IEPHOPCI.jpg">
+      <button id="host-event">
+        Host an Event
+      </button>
+    </div>
+    <form onsubmit="event.preventDefault();" role="search" id="searchbar">
+      <input id="search" type="search" placeholder="Enter Criteria" autofocus required />
+      <button type="submit">Search</button>    
+    </form>
+    <div>
+      <div id="events-column">
+        <div id="column-right">
+          <h1>Latest Events</h1>
+          <div class="events">Event</div>
+          <div class="events">Event</div>
+          <div class="events">Event</div>
+          <br>
+        </div>
+        <div id="column-left">
+          <h1>Events from your area</h1>
+          <div class="events">Event</div>
+          <div class="events">Event</div>
+          <div class="events">Event</div>
+          <br>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
