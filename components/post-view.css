@@ -58,7 +58,7 @@ body {
   display: block;
 }
 
-.events{
+.events {
   height: 40vh;
   margin-bottom: 5vh;
   background-color: aqua;
@@ -66,15 +66,13 @@ body {
   font-size: 16px;
   letter-spacing: 0.5px;
   text-align: center;
-  cursor: pointer;
 }
 
 /*ID*/
 #container {
   position: relative;
   width: 100%;
-  background-color: black;
-  box-shadow: -2px -2px 5px white, 2px -2px 5px white;
+  background-color: rgb(0, 0, 0);
 }
 
 #container > nav {
@@ -213,12 +211,47 @@ a {
   user-select: none;
 }
 
-#home-cover {
-  height: 500px;
-  width: 100%;
+/* navbar */
+#post-view-navbar {
+  background-color: black;
+}
+#post-view-navbar > ul {
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 10vh;
+  border: none;
+  overflow: hidden;
+  background-color: #858585;
 }
 
-#host-event {
+#post-view-navbar > ul > li {
+  float: left;
+}
+
+#post-view-navbar > ul > li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#post-view-navbar > ul > li a:hover:not(.active) {
+  background-color: #ffffff;
+}
+
+#post-view-navbar > ul > li a.active {
+  background-color: #00e5fa;
+}
+
+#event-name {
+  font-size: 48px;
+  margin-left: 10vh;
+  margin-top: 5vh;
+}
+
+#join-event {
+  float: right;
   background-color: #000000; /* Green background color */
   color: white; /* White text color */
   padding: 10px 20px; /* Padding for the button */
@@ -229,75 +262,121 @@ a {
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Cursor style on hover */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
-  position: absolute;
-  top: 85%;
-  left: 90%;
+  margin-top: -5vh;
+  margin-right: 10vh;
 }
 
-#host-event:hover {
+#join-event:hover {
   color: #000000;
   background-color: #ffffff;
   border: 2px solid black;
 }
 
-/*Searchbar */
-
-#searchbar{
-  margin-top: 2vh;
-  text-align: center;
+#row-1 {
+  padding: 20vh;
+  height: 30vh;
 }
 
-#searchbar > input {
-  width: 100vh;
-  border-radius: 5px;
-  border: 2px solid black;
-  padding: 10px;
-  font-family: "auraregular";
-  font-size: 16px;
-  letter-spacing: 0.5px;
+#row-2 {
+  justify-content: center;
+  padding: 20vh;
+  height: 50vh;
+  display: flex;
 }
 
-#searchbar > button{
-  width: 20vh;
-  border-radius: 5px;
-  border: 2px solid black;
-  padding: 10px;
-  font-family: "auraregular";
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  background-color: #000000; /* Green background color */
-  color: white; /* White text color */
-  border: 2px solid black;
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer;
+#row-3 {
+  padding: 20vh;
+  height: 50vh;
 }
 
-#searchbar > button:hover {
-  color: #000000;
-  background-color: #ffffff;
-  border: 2px solid black;
-}
-
-#events-column{
-  width: 80%;
-  height: 100px;
-  margin: auto;
-  margin-top: 5vh;
-  text-align: center;
-}
-
-#column-left{
+#event-description {
+  background-color: aqua;
   float: left;
   width: 45%;
-  height: 90vh;
-  margin-bottom: 20vh;
+  height: 30vh;
   text-align: left;
 }
 
-#column-right{
+#event-details {
+  background-color: aqua;
   float: right;
   width: 45%;
-  height: 90vh;
-  margin-bottom: 20vh;
+  height: 30vh;
   text-align: left;
+}
+
+#event-snipshot {
+  margin-top: -30vh;
+  margin-right: 1vh;
+  margin-left: 1vh;
+  background-color: aqua;
+  flex-grow: 3;
+}
+
+#requirements {
+  margin-top: -30vh;
+  height: 30vh;
+  background-color: aqua;
+}
+
+/* Updates */
+
+
+/* Messages */
+
+#profile-pic{
+  float: left;
+  background-color: black;
+  height: 5vh;
+  width: 5vh;
+  clear: right;
+  margin-left: 40vh;
+  margin-top: -20vh;
+}
+
+#comment{
+  clear: both;
+  float: right;
+  background-color: aqua;
+  width: 130vh;
+  height: 15vh;
+  margin-right: 20vh;
+  margin-bottom: 5vh;
+}
+
+#comment-row{
+  margin-left: 40vh;
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+  margin-top: 25vh;
+}
+
+#comment-textarea {
+  width: 87%;
+  border-width: 2px;
+  border-color: black;
+  resize: none;
+  padding: 5px;
+}
+
+#submit-button {
+  margin-right: 20vh;
+  margin-bottom: 10vh;
+  float: right;
+  background-color: #000000; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size of the text */
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+  border: 2px solid black;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#submit-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid black;
 }

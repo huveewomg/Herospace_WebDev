@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="homestyle.css" />
+  <link rel="stylesheet" href="post-view.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -28,7 +28,7 @@
           </div>
         </li>
         <li><a href="#" onclick="window.location='about-us.html'">About Us</a></li>
-        <li><a href="#" onclick="window.location='create-event.html'">Share the Love!</a></li>
+        <li><a href="#">Share the Love!</a></li>
       </ul>
 
       <div id="profile-logo-container">
@@ -53,35 +53,53 @@
 </head>
 
 <body>
-  <div style="position: relative;">
-    <img id="home-cover"
-      src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/UHEUMBOZ3JNKPDFPX3IEPHOPCI.jpg">
-    <button id="host-event">
-      Host an Event
-    </button>
+  <div id="post-view-navbar" style="margin-bottom: 10vh;">
+    <ul>
+      <li><a href="#" onclick="window.location='post-view-overview.html'">Overview</a></li>
+      <li><a href="#" onclick="window.location='post-view-updates.html'">Updates</a></li>
+      <li><a class="active" href="#" onclick="window.location='post-view-discussions.html'">Discussion</a></li>
+    </ul>
   </div>
-  <form onsubmit="event.preventDefault();" role="search" id="searchbar">
-    <input id="search" type="search" placeholder="Enter Criteria" autofocus required />
-    <button type="submit">Search</button>
-  </form>
-  <div>
-    <div id="events-column">
-      <div id="column-right">
-        <h1>Latest Events</h1>
-        <div class="events" onclick="window.location='post-view-overview.html'">Event</div>
-        <div class="events" onclick="window.location='post-view-overview.html'">Event</div>
-        <div class="events" onclick="window.location='post-view-overview.html'">Event</div>
-        <br>
-      </div>
-      <div id="column-left">
-        <h1>Events from your area</h1>
-        <div class="events" onclick="window.location='post-view-overview.html'">Event</div>
-        <div class="events" onclick="window.location='post-view-overview.html'">Event</div>
-        <div class="events" onclick="window.location='post-view-overview.html'">Event</div>
-        <br>
-      </div>
+
+  <div id="comment-box">
+    <div id="comment">Comment</div>
+    <div id="profile-pic">
+      <p>Username</p>
     </div>
   </div>
-</body>
 
+  <div id="comment-box">
+    <div id="comment">Comment</div>
+    <div id="profile-pic">
+      <p>Username</p>
+    </div>
+  </div>
+
+  <div id="comment-box">
+    <div id="comment">Comment</div>
+    <div id="profile-pic">
+      <p>Username</p>
+    </div>
+  </div>
+
+  <div id="comment-box">
+    <div id="comment">Comment</div>
+    <div id="profile-pic">
+      <p>Username</p>
+    </div>
+  </div>
+
+  <div id="comment-box">
+    <div id="comment">Comment</div>
+    <div id="profile-pic">
+      <p>Username</p>
+    </div>
+  </div>
+
+  <div id="comment-row">
+    <textarea name="" cols="30" rows="10" id="comment-textarea" placeholder="Comment Something...";></textarea>
+    <button id="submit-button">Submit</button>
+  </div>
+</div>
+</body>
 </html>
