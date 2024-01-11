@@ -194,6 +194,7 @@ div{
   border-bottom-left-radius: 20px ;
   cursor: pointer;
   z-index: 1;
+  text-decoration: none;
 }
 
 

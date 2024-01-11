@@ -129,7 +129,7 @@ elseif(isset($_POST['registerEmail'])) {
     <div class="split"></div>
     <div class="wrapper">
         <span class="close-icon">
-            close
+            <a href="../index.html">close</a>
         </span>
 
         <!-- Login Segment -->
