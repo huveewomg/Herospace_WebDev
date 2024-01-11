@@ -270,6 +270,7 @@ a {
   border: 2px solid black;
   border-radius: 5px; /* Rounded corners */
   cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 #searchbar > button:hover {
