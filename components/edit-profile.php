@@ -56,11 +56,11 @@
   <div id="column-left">
     <div id="sidebar">
       <h2>Profile</h2>
-      <p id="sidebar-p"  onclick="window.location = 'edit-profile.html'">Customize Your Profile</p>
+      <p id="sidebar-p"  onclick="window.location = 'edit-profile.php'">Customize Your Profile</p>
       <h2>Recommendation</h2>
-      <p id="sidebar-p" onclick="window.location = 'preferences.html'">Preferences</p>
+      <p id="sidebar-p" onclick="window.location = 'preferences.php'">Preferences</p>
       <h2>Account Management</h2>
-      <p id="sidebar-p" onclick="window.location = 'change_pass.html'">Password</p>
+      <p id="sidebar-p" onclick="window.location = 'change_pass.php'">Password</p>
     </div>
   </div>
   <div id="column-middle"></div>

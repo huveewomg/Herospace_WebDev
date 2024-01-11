@@ -15,19 +15,19 @@
         <img src="../assets/img/Logo.png" alt="" id="logo" />
       </div>
       <ul>
-        <li><a href="#" onclick="window.location='home.html'">Home</a></li>
+        <li><a href="#" onclick="window.location='home.php'">Home</a></li>
         <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"
           style="position: relative; z-index: 9999;">
           <a href="#">Projects &nbsp;<i class="fa fa-caret-down"></i></a>
           <div class="dd">
             <div id="up_arrow"></div>
             <ul>
-              <li><a href="#" onclick="window.location='featured-projects.html'">Featured</a></li>
+              <li><a href="#" onclick="window.location='featured-projects.php'">Featured</a></li>
               <li><a href="#">Recent Posts</a></li>
             </ul>
           </div>
         </li>
-        <li><a href="#" onclick="window.location='about-us.html'">About Us</a></li>
+        <li><a href="#" onclick="window.location='about-us.php'">About Us</a></li>
         <li><a href="#">Share the Love!</a></li>
       </ul>
 
@@ -37,7 +37,7 @@
             person
           </span>
           <div class="dropdown-content">
-            <li onclick="window.location = 'profile.html'">Profile</li>
+            <li onclick="window.location = 'profile.php'">Profile</li>
             <li>Logout</li>
           </div>
         </div>
@@ -55,9 +55,9 @@
 <body>
   <div id="post-view-navbar" style="margin-bottom: 10vh;">
     <ul>
-      <li><a href="#" onclick="window.location='post-view-overview.html'">Overview</a></li>
-      <li><a href="#" onclick="window.location='post-view-updates.html'">Updates</a></li>
-      <li><a class="active" href="#" onclick="window.location='post-view-discussions.html'">Discussion</a></li>
+      <li><a href="#" onclick="window.location='post-view-overview.php'">Overview</a></li>
+      <li><a href="#" onclick="window.location='post-view-updates.php'">Updates</a></li>
+      <li><a class="active" href="#" onclick="window.location='post-view-discussions.php'">Discussion</a></li>
     </ul>
   </div>
 

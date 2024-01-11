@@ -52,7 +52,7 @@ if (isset($_POST['email'])) {
     }
 
     if ($found) {
-        header("Location: home.html");
+        header("Location: home.php");
         echo "alert('Login successful!')";
     } else {
         echo "<script>alert('Invalid email or password');
@@ -129,7 +129,7 @@ elseif(isset($_POST['registerEmail'])) {
     <div class="split"></div>
     <div class="wrapper">
         <span class="close-icon">
-            <a href="../index.html">close</a>
+            <a href="../index.php">close</a>
         </span>
 
         <!-- Login Segment -->

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="post-view.css" />
+  <link rel="stylesheet" href="create-event.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -15,20 +15,20 @@
         <img src="../assets/img/Logo.png" alt="" id="logo" />
       </div>
       <ul>
-        <li><a href="#" onclick="window.location='home.html'">Home</a></li>
+        <li><a href="#" onclick="window.location='home.php'">Home</a></li>
         <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"
           style="position: relative; z-index: 9999;">
           <a href="#">Projects &nbsp;<i class="fa fa-caret-down"></i></a>
           <div class="dd">
             <div id="up_arrow"></div>
             <ul>
-              <li><a href="#" onclick="window.location='featured-projects.html'">Featured</a></li>
+              <li><a href="#" onclick="window.location='featured-projects.php'">Featured</a></li>
               <li><a href="#">Recent Posts</a></li>
             </ul>
           </div>
         </li>
-        <li><a href="#" onclick="window.location='about-us.html'">About Us</a></li>
-        <li><a href="#">Share the Love!</a></li>
+        <li><a href="#" onclick="window.location='about-us.php'">About Us</a></li>
+        <li><a href="#" onclick="window.location='create-event.php'">Share the Love!</a></li>
       </ul>
 
       <div id="profile-logo-container">
@@ -37,7 +37,7 @@
             person
           </span>
           <div class="dropdown-content">
-            <li onclick="window.location = 'profile.html'">Profile</li>
+            <li onclick="window.location = 'profile.php'">Profile</li>
             <li>Logout</li>
           </div>
         </div>
@@ -53,26 +53,26 @@
 </head>
 
 <body>
-  <div id="post-view-navbar">
-    <ul>
-      <li><a class="active" href="#" onclick="window.location='post-view-overview.html'">Overview</a></li>
-      <li><a href="#" onclick="window.location='post-view-updates.html'">Updates</a></li>
-      <li><a href="#" onclick="window.location='post-view-discussions.html'">Discussion</a></li>
-    </ul>
-  </div>
-  <h1 id="event-name">Event Name</h1>
-  <button id="join-event">Join Event</button>
-  <div id="row-1">
-    <div id="event-description">Description</div>
-    <div id="event-details">Details</div>
-  </div>
-  <div id="row-2" class="flex-container">
-    <div id="event-snipshot">Snipshot</div>
-    <div id="event-snipshot">Snipshot</div>
-    <div id="event-snipshot">Snipshot</div>
-  </div>
-  <div id="row-3">
-    <div id="requirements">Requirements</div>
-  </div>
+  
 </body>
+<h1>
+    Share the Love!
+</h1>
+<div id="column-right">
+    <div>Event Date</div>
+    <div id="event-box">
+        <div>Event Date & Time</div>
+        <div>Event Location</div>
+        <div>Participation Fee</div>
+        <div>Tags</div>
+        <div>Embed Link</div>
+    </div>
+</div>
+<div id="column-left">
+    <div>Event Name</div>
+    <div>Event Description</div>
+    <div>Event Requirements</div>
+    <div>Event Iamges</div>
+    <div>Updates</div>
+</div>
 </html>
