@@ -68,20 +68,25 @@
     <div id="events-column">
       <div id="column-right">
         <h1>Latest Events</h1>
-        <div class="events" onclick="window.location='post-view-overview.php'">Event</div>
-        <div class="events" onclick="window.location='post-view-overview.php'">Event</div>
-        <div class="events" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
         <br>
       </div>
       <div id="column-left">
         <h1>Events from your area</h1>
-        <div class="events" onclick="window.location='post-view-overview.php'">Event</div>
-        <div class="events" onclick="window.location='post-view-overview.php'">Event</div>
-        <div class="events" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
+        <div class="events scrollFade" onclick="window.location='post-view-overview.php'">Event</div>
         <br>
       </div>
     </div>
   </div>
+    <script src="homescript.js"></script>
 </body>
 
 </html>

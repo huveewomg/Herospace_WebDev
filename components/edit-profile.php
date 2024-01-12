@@ -15,7 +15,7 @@
           <img src="../assets/img/Logo.png" alt="" id="logo" />
         </div>
         <ul>
-          <li><a href="#" onclick="window.location='home.html'">Home</a></li>
+          <li><a href="#" onclick="window.location='home.php'">Home</a></li>
           <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);"
             style="position: relative; z-index: 9999;">
             <a href="#">Projects &nbsp;<i class="fa fa-caret-down"></i></a>
