@@ -1,6 +1,7 @@
 <?php
-include('connection.php');
 session_start();
+include('connection.php');
+
 
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
@@ -15,6 +16,7 @@ if (isset($_POST['email'])) {
             $found = TRUE;
             $_SESSION['email'] = $volunteer['email'];
             $_SESSION['password'] = $volunteer['password'];
+            $_SESSION['state'] = $volunteer['state'];
             $_SESSION['status'] = 'volunteer';
             break;
         }
@@ -53,14 +55,11 @@ if (isset($_POST['email'])) {
 
     if ($found) {
         header("Location: home.php");
-        echo "alert('Login successful!')";
+        echo "<script>alert('Login Successful');</script>";
     } else {
-        echo "<script>alert('Invalid email or password');
-              window.location = 'login.php'</script>";
+        echo "<script>alert('Invalid email or password');</script>";
     }
-}
-
-elseif(isset($_POST['registerEmail'])) {
+} elseif (isset($_POST['registerEmail'])) {
     $registerEmail = $_POST['registerEmail'];
     $registerName = $_POST['registerName'];
     $registerPassword = $_POST['registerPassword'];
@@ -151,7 +150,7 @@ elseif(isset($_POST['registerEmail'])) {
                     <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
-                
+
                 <div class="TC">
                     <label><input type="checkbox" required>
                         I agree to the</label>
@@ -176,7 +175,7 @@ elseif(isset($_POST['registerEmail'])) {
                     <span class="person-icon">
                         person
                     </span>
-                    <input type="text" name="registerName"required>
+                    <input type="text" name="registerName" required>
                     <label>Name</label>
                 </div>
                 <div class="input-box">
@@ -191,7 +190,7 @@ elseif(isset($_POST['registerEmail'])) {
                     <span class="material-symbols-outlined">
                         lock
                     </span>
-                    <input type="password"  name="registerPassword" required>
+                    <input type="password" name="registerPassword" required>
                     <label>Password</label>
                 </div>
 
@@ -199,7 +198,7 @@ elseif(isset($_POST['registerEmail'])) {
                     <span class="material-symbols-outlined">
                         lock
                     </span>
-                    <input type="password"  name="cpassword" required>
+                    <input type="password" name="cpassword" required>
                     <label>Confirm Password</label>
                 </div>
 
