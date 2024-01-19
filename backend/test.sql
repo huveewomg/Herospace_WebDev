@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2024 at 11:59 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Generation Time: Jan 19, 2024 at 04:44 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `admins` (
   `adminid` varchar(20) NOT NULL,
   `password` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admins`
@@ -49,7 +49,7 @@ CREATE TABLE `charity` (
   `charityid` varchar(255) NOT NULL,
   `password` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `charity`
@@ -70,7 +70,7 @@ CREATE TABLE `comments` (
   `comment` varchar(255) DEFAULT NULL,
   `eventid` varchar(255) DEFAULT NULL,
   `volunteerid` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -84,21 +84,20 @@ CREATE TABLE `events` (
   `event_date` date DEFAULT NULL,
   `charityid` varchar(255) DEFAULT NULL,
   `event_desc` text NOT NULL,
-  `event_images` blob NOT NULL,
   `event_req` text NOT NULL,
   `event_fee` int(11) NOT NULL,
   `event_tags` varchar(255) NOT NULL,
   `signup_link` varchar(255) NOT NULL,
   `event_state` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`eventid`, `event_name`, `event_date`, `charityid`, `event_desc`, `event_images`, `event_req`, `event_fee`, `event_tags`, `signup_link`, `event_state`) VALUES
-('C001', 'Larian Gey', '2024-02-10', 'C001', 'This is a description', '', 'These are the requirements', 10, 'charity,river,cleanup', 'bit.ly/signup/', 'KL'),
-('E002', 'isreal ', '2025-10-25', 'C001', 'This is a description', '', 'These are the requirements', 10, 'charity,river,cleanup', 'bit.ly/signup/', 'Perak');
+INSERT INTO `events` (`eventid`, `event_name`, `event_date`, `charityid`, `event_desc`, `event_req`, `event_fee`, `event_tags`, `signup_link`, `event_state`) VALUES
+('C001', 'Larian Gey', '2024-02-10', 'C001', 'This is a description', 'These are the requirements', 10, 'charity,river,cleanup', 'bit.ly/signup/', 'KL'),
+('E002', 'isreal ', '2025-10-25', 'C001', 'This is a description', 'These are the requirements', 10, 'charity,river,cleanup', 'bit.ly/signup/', 'Perak');
 
 -- --------------------------------------------------------
 
@@ -113,19 +112,21 @@ CREATE TABLE `volunteer` (
   `state` varchar(50) NOT NULL,
   `age` int(11) NOT NULL,
   `gender` varchar(50) NOT NULL,
-  `bio` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `bio` text NOT NULL,
+  `preferences` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `volunteer`
 --
 
-INSERT INTO `volunteer` (`email`, `password`, `name`, `state`, `age`, `gender`, `bio`) VALUES
-('charlie123@gmail.com', 'goodjob', 'Charlie', 'KL', 0, '', ''),
-('chintimothy45@gmail.com', '123', 'Timothy', 'Perak', 0, '', ''),
-('V001@gmail.com', 'supbro', 'jason', '', 0, '', ''),
-('V002', 'besboi', 'shan', '', 0, '', ''),
-('V003', 'babi', 'peppa babi', '', 0, '', '');
+INSERT INTO `volunteer` (`email`, `password`, `name`, `state`, `age`, `gender`, `bio`, `preferences`) VALUES
+('charlie123@gmail.com', 'goodjob', 'Charlie', 'KL', 0, '', 'I love men', ''),
+('chintimothy45@gmail.com', '123', 'Yong Sheng', 'Kuala Lumpur', 20, 'Male', 'I love walks.', ',food bank,dog shelter,reforestation,cleanup,education,animal shelter,clinic,orphanage'),
+('lolman@gmail.com', '123', '99999', 'KL', 20, 'Male', 'Hello', ''),
+('V001@gmail.com', 'supbro', 'jason', '', 0, '', '', ''),
+('V002', 'besboi', 'shan', '', 0, '', '', ''),
+('V003', 'babi', 'peppa babi', '', 0, '', '', '');
 
 --
 -- Indexes for dumped tables
