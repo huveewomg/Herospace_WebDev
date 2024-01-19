@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+require('connection.php');
+
+$sql = "Select * from volunteer where email = '$_SESSION[email]'";
+$result =  $connection->query($sql);
+$result = $result->fetch_assoc();
+
+//Getting data from the user row
+$password = $result['password'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,22 +30,57 @@
     </div>
   </div>
   <div id="column-middle"></div>
-  <div id="column-right">
-    <h2>Password</h2>
-    <br />
-    <p>Change your password here.</p>
-    <hr />
-    <div><strong>Old Password</strong></div>
-    <input class="password" type="password" />
-    <div><strong>New Password</strong></div>
-    <input class="password" type="password" />
-    <div><strong>Confirm Password</strong></div>
-    <input class="password" type="password" />
-    <br>
-    <button id="confirm-button">
-      Confirm
-    </button>
-  </div>
+
+  <form onsubmit="return validateForm()" action="save-change-pass.php" method="post">
+    <div id="column-right">
+      <input name="email" type="hidden" value=<?php echo "$_SESSION[email]" ?> />
+      <h2>Password</h2>
+      <br />
+      <p>Change your password here.</p>
+      <hr />
+      <div><strong>Old Password</strong></div>
+      <input class="password" type="password" name="oldpass" id="oldpass"/>
+      <div><strong>New Password</strong></div>
+      <input class="password" type="password" name="newpass" id="newpass" />
+      <div><strong>Confirm Password</strong></div>
+      <input class="password" type="password" name="confirmpass" id="confirmpass" />
+      <br>
+      <button type="submit" name="submit" id="confirm-button">Confirm</button>
+    </div>
+  </form>
+
+  <script>
+    function validateForm() {
+      // Get form inputs
+      var oldpass = document.getElementById('oldpass').value;
+      var newpass = document.getElementById('newpass').value;
+      var confirmpass = document.getElementById('confirmpass').value;
+      var password = "<?php echo $password; ?>";
+
+      // Check if old password is correct
+      if (password != document.getElementById('oldpass').value) {
+        alert('Old password is incorrect.');
+        return false;
+      }
+
+      // Check if passwords are empty
+      if (newpass.trim() === '' || confirmpass.trim() === '' || oldpass.trim() === '') {
+        alert('Password is required.');
+        return false;
+      }
+
+      // Check if passwords are the same
+      if (newpass != confirmpass) {
+        alert('Passwords do not match.');
+        return false;
+      }
+      
+      // If all validations pass, allow form submission
+      return true;
+
+    }
+  </script>
+
 </body>
 
 </html>

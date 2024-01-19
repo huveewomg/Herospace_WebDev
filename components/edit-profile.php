@@ -1,11 +1,15 @@
 <?php
 
 session_start();
-include('connection.php');
+require('connection.php');
 
 $sql = "Select * from volunteer where email = '$_SESSION[email]'";
 $result =  $connection->query($sql);
 $result = $result->fetch_assoc();
+
+//Getting data from the user row
+$selected_option = $result['state'];
+$gender = $result['gender'];
 
 ?>
 
@@ -30,7 +34,8 @@ $result = $result->fetch_assoc();
   <div id="column-middle"></div>
 
   <!-- Submit edited information form -->
-  <form action="edit-profile.php" method="post">
+  <form action="save-edit-profile.php" method="post">
+  <input name="email" type="hidden" value= <?php echo"$_SESSION[email]"?> />
     <div id="column-right">
       <div id="profile-info"></div>
       <h2>Profile Information</h2>
@@ -43,52 +48,54 @@ $result = $result->fetch_assoc();
             <img id="profile-img" src="..//assets/img/Logo.png" alt="testing" />
           </div>
         </div>
+
+        <!-- Name input -->
         <div id="name-column">
           <div id="name">Name</div>
-          <input type="text" style="border-width: 2px;" value="<?php echo $result['name']; ?>" />
+          <input type="text" style="border-width: 2px;" value="<?php echo $result['name']; ?>" name="name" />
         </div>
+
+        <!-- Age input -->
         <div id="age-column">
           <div id="age">
             Age
             <br />
-            <input type="text" style="border-width: 2px;" value="<?php echo $result['age'] == null ? 0 : $result['age'];?>" />
+            <input type="text" style="border-width: 2px;" value="<?php echo $result['age'] == null ? 0 : $result['age']; ?>" name="age" />
           </div>
           <div id="state">
             <label for="dropdown">State</label> <br />
-            <select id="dropdown" name="dropdown" style="border-width: 2px;border-color: black;" >
-              <option value="option1">Johor</option>
-              <option value="option2">Kedah</option>
-              <option value="option3">Kelantan</option>
-              <option value="option1">Malacca</option>
-              <option value="option2">Negeri Sembilan</option>
-              <option value="option3" selected>Pahang</option>
-              <option value="option1">Penang</option>
-              <option value="option2">Perak</option>
-              <option value="option3">Perlis</option>
-              <option value="option1">Sabah</option>
-              <option value="option2">Sarawak</option>
-              <option value="option3">Selangor</option>
-              <option value="option1">Terengganu</option>
-              <option value="option2">WP KL</option>
-              <option value="option3">WP Labuan</option>
+            <select id="dropdown" name="state" style="border-width: 2px;border-color: black;">
+              <?php
+              $options = array('Kedah', 'Kelantan', 'Malacca', 'Negeri Sembilan', 'Pahang', 'Penang', 'Perak', 'Perlis', 'Sabah', 'Sarawak', 'Selangor', 'Terengganu', 'Johor', 'Kuala Lumpur', 'Labuan', 'Putrajaya');
+
+              // Generate options dynamically
+              foreach ($options as $option) {
+                echo '<option value="' . $option . '" ' . ($selected_option === $option ? 'selected' : '') . '>' . $option . '</option>';
+              }
+              ?>
             </select>
           </div>
           <div id="gender">
             Gender <br />
-            <select id="dropdown" name="dropdown" style="border-width: 2px;border-color: black;">
-              <option value="option1">Male</option>
-              <option value="option2">Female</option>
-              <option value="option3">Other</option>
+            <select id="dropdown" name="gender" style="border-width: 2px;border-color: black;">
+              <?php
+              $options = array('Male', 'Female', 'Other');
+
+              // Generate options dynamically
+              foreach ($options as $option) {
+                echo '<option value="' . $option . '" ' . ($gender === $option ? 'selected' : '') . '>' . $option . '</option>';
+              }
+              ?>
             </select>
           </div>
         </div>
       </div>
 
       <div id="bio-row">
-        Bio <br /><textarea name="" cols="30" rows="10" id="bio-textarea"></textarea>
+        Bio <br /><textarea name="bio" cols="30" rows="10" id="bio-textarea"><?php echo htmlspecialchars($result['bio']); ?></textarea>
         <br>
         <br>
-        <button id="submit-button">Submit</button>
+        <button type="submit" name="submit" id="submit-button">Submit</button> 
       </div>
     </div>
   </form>

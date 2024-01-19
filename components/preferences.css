@@ -272,13 +272,13 @@
 
   #tag_column1{
     float: left;
-    width: 15%;
+    width: 30%;
   }
 
   #tag_column2{
     
-    float: right;
-    width: 35%;
+    float: left;
+    width: 30%;
   }
 
   #tag_column3{
