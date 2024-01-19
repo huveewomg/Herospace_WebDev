@@ -202,9 +202,16 @@ h2 {
   padding-left: 2vh ;
   padding-top: 0.5vh ;
   border-style: solid;
-  border-width: 1vh;
+  border-width: 1vh;  
+}
+#stats p{
+  font-size: 40px;
+  margin-top: 1vh;
 }
 
 
+#eventCounter{
+  font-size: 35px;
+}
 
 

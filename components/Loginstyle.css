@@ -187,14 +187,19 @@ div{
   height: 45px;
   background-color:#162938;
   font-size: 2em;
-  color:white;
+  color: white;;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom-left-radius: 20px ;
   cursor: pointer;
   z-index: 1;
+}
+
+.wrapper .close-icon a{
   text-decoration: none;
+  outline: none;
+  color: white;
 }
 
 
