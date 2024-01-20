@@ -256,6 +256,10 @@ div{
   line-height: 57px; ;
 }
 
+.message{
+  color: red;
+}
+
 /* login button */
 .btn{
   width: 100%;

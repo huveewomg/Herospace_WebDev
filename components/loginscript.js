@@ -28,7 +28,7 @@ function showSlides() {
     }
     dots[slideIndex - 1].classList.add("active");
     showSlides();
-  }, 10000); // Change image every 10 seconds (matching the total animation duration)
+  }, 10000); // Change image every 10 seconds
 }
 
 
@@ -45,19 +45,24 @@ loginLink.addEventListener('click', ()=> {
   wrapper.classList.remove('active');
 } )
 
-// validation password
-function CheckPassword(){
-  let password = document.getElementById("password").value;
-  let cpassword = document.getElementById("cpassword").value;
-  console.log(password,password);
-  let mesasge = document.getElementById("message");
 
-  if (password.length !=0) {
-    if(password == cpassword){
-      mesasge.textContent = ""
-    }
-    else{
-      mesasge.textContent = "Passwords don't match"
-    }
-  }
+
+// validation password
+let password = document.querySelector('.input-box input[name="registerPassword"]');
+let cpassword = document.querySelector('.input-box input[name="cpassword"]');
+let message = document.querySelector('#message');
+const registerButton = document.querySelector('button[onclick="CheckPassword()"]'); 
+registerButton.disabled = true;
+
+
+
+function checkPassword () {
+    message.innerText = password.value == cpassword.value ? '' : 'Password do not match !';
+    registerButton.disabled = password.value !== cpassword.value;
 }
+
+password.addEventListener('keyup', () => {
+    if (cpassword.value.length != 0) checkPassword();
+})
+
+cpassword.addEventListener('keyup', checkPassword);

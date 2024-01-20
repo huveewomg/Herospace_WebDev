@@ -62,8 +62,8 @@ if (isset($_POST['email'])) {
 } elseif (isset($_POST['registerEmail'])) {
     $registerEmail = $_POST['registerEmail'];
     $registerName = $_POST['registerName'];
-    $registerPassword = $_POST['registerPassword'];
-    $cpassword = $_POST['cpassword'];
+    $registerPassword = trim($_POST['registerPassword']);
+    $cpassword = trim($_POST['cpassword']);
 
     // Check if the email already exists in the database
     $checkEmailQuery = "SELECT * FROM volunteer WHERE email = '$registerEmail'";
@@ -75,18 +75,14 @@ if (isset($_POST['email'])) {
               window.location = 'login.php'</script>";
     } else {
         // If email doesn't exist, proceed with registration
-        if ($registerPassword == $cpassword) {
-            $sql = "INSERT INTO volunteer (email, password, name) VALUES ('$registerEmail','$registerPassword','$registerName')";
-            $result = mysqli_query($connection, $sql);
-            if ($result) {
-                echo "<script>alert('Successful registration');
-                      window.location = 'login.php'</script>";
-            } else {
-                echo "<script>alert('Failed registration');
-                      window.location = 'login.php'</script>";
-            }
+        // The password validation will be handled by the js code
+        $sql = "INSERT INTO volunteer (email, password, name) VALUES ('$registerEmail','$registerPassword','$registerName')";
+        $result = mysqli_query($connection, $sql);
+        if ($result) {
+            echo "<script>alert('Successful registration');
+                  window.location = 'login.php'</script>";
         } else {
-            echo "<script>alert('Passwords do not match');
+            echo "<script>alert('Failed registration. SQL Error: " . mysqli_error($connection) . "');
                   window.location = 'login.php'</script>";
         }
     }
@@ -225,7 +221,7 @@ if (isset($_POST['email'])) {
 
 
 
-    <script src="script.js"></script>
+    <script src="loginscript.js"></script>
 </body>
 
 </html>
