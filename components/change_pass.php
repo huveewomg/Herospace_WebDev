@@ -51,27 +51,34 @@ $password = $result['password'];
 
   <script>
     function validateForm() {
-      // Get form inputs
-      var oldpass = document.getElementById('oldpass').value;
-      var newpass = document.getElementById('newpass').value;
-      var confirmpass = document.getElementById('confirmpass').value;
-      var password = "<?php echo $password; ?>";
+      const oldpass = document.getElementById('oldpass').value;
+      const newpass = document.getElementById('newpass').value.trim();
+      const confirmpass = document.getElementById('confirmpass').value.trim();
+      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+      const correctPassword = "<?php echo $password; ?>";
 
-      // Check if old password is correct
-      if (password != document.getElementById('oldpass').value) {
+      if (oldpass !== correctPassword) {
         alert('Old password is incorrect.');
         return false;
       }
 
-      // Check if passwords are empty
-      if (newpass.trim() === '' || confirmpass.trim() === '' || oldpass.trim() === '') {
+      if (newpass === '' || confirmpass === '') {
         alert('Password is required.');
         return false;
       }
 
-      // Check if passwords are the same
-      if (newpass != confirmpass) {
+      if (newpass !== confirmpass) {
         alert('Passwords do not match.');
+        return false;
+      }
+
+      if (newpass.length < 8) {
+        alert('Password must be at least 8 characters long.');
+        return false;
+      }
+
+      if (!passwordRegex.test(newpass)) {
+        alert('New Password must contain at least 1 letter, 1 number, and 1 special character.');
         return false;
       }
       

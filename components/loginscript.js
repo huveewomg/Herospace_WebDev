@@ -57,8 +57,31 @@ registerButton.disabled = true;
 
 
 function checkPassword () {
-    message.innerText = password.value == cpassword.value ? '' : 'Password do not match !';
-    registerButton.disabled = password.value !== cpassword.value;
+  const passwordValue = password.value;
+  const cpasswordValue = cpassword.value;
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+
+
+  if (passwordValue !== cpasswordValue){
+    message.innerText = 'Passwords do not match!';
+    registerButton.disabled = true;
+    return;
+  }
+
+  if (passwordValue.length < 8){
+    message.innerText = 'Password must be at least 8 characters long';
+    registerButton.disabled = true;
+    return;
+  }
+
+  if (!passwordRegex.test(passwordValue)){
+    message.innerText = 'Password must contain at least 1 letter, 1 number, and 1 special character';
+    registerButton.disabled = true;
+    return;
+  }
+
+  message.innerText = '';
+  registerButton.disabled = false;
 }
 
 password.addEventListener('keyup', () => {
