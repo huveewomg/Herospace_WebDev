@@ -63,4 +63,6 @@ $state = $_SESSION['state'];
   <script src="homescript.js"></script>
 </body>
 
+<!-- Footer Component -->
+<?php include 'footer.php'; ?>
 </html>

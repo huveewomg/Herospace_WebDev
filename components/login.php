@@ -98,6 +98,7 @@ if (isset($_POST['email'])) {
     <title>Herospace</title>
     <link rel="stylesheet" href="loginstyle.css">'
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/png" href="../assets/favicon_io/favicon-16x16.png" />
 </head>
 
 <body>
@@ -218,10 +219,14 @@ if (isset($_POST['email'])) {
         </div>
 
     </div>
+<<<<<<< Updated upstream
 
 
 
     <script src="loginscript.js"></script>
+=======
+    <script src="script.js"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>
