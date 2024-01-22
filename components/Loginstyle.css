@@ -256,6 +256,10 @@ div{
   line-height: 57px; ;
 }
 
+.loginMessage{
+  color: red;
+}
+
 .message{
   color: red;
 }

@@ -75,7 +75,7 @@ if (isset($_POST['email'])) {
               window.location = 'login.php'</script>";
     } else {
         // If email doesn't exist, proceed with registration
-        // The password validation will be handled by the js code
+        // validation will be handled by the js code
         $sql = "INSERT INTO volunteer (email, password, name) VALUES ('$registerEmail','$registerPassword','$registerName')";
         $result = mysqli_query($connection, $sql);
         if ($result) {
@@ -148,13 +148,17 @@ if (isset($_POST['email'])) {
                     <label>Password</label>
                 </div>
 
+                <div class="loginMessage"> 
+                    <p id="loginMessage"></p>
+                </div>
+
                 <div class="TC">
                     <label><input type="checkbox" required>
                         I agree to the</label>
-                    <a href="#">Term and Conditions</a>
+                    <a href="#">Terms and Conditions</a>
                 </div>
 
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" onclick="CheckLogin()" class="btn">Login</button>
                 <div class="login-register">
                     <p>New User ?
                         <a href="#" class="register-link">Register</a>
@@ -206,7 +210,7 @@ if (isset($_POST['email'])) {
                 <div class="T&C">
                     <label><input type="checkbox">
                         I agree to the</label>
-                    <a href="#">Term and Conditions</a>
+                    <a href="#">Terms and Conditions</a>
                 </div>
 
                 <button type="submit" onclick="CheckPassword()" class="btn">Register</button>
@@ -219,14 +223,10 @@ if (isset($_POST['email'])) {
         </div>
 
     </div>
-<<<<<<< Updated upstream
 
 
 
     <script src="loginscript.js"></script>
-=======
-    <script src="script.js"></script>
->>>>>>> Stashed changes
 </body>
 
 </html>

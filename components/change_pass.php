@@ -72,8 +72,8 @@ $password = $result['password'];
         return false;
       }
 
-      if (newpass.length < 8) {
-        alert('Password must be at least 8 characters long.');
+      if (newpass.length < 6) {
+        alert('Password must be at least 6 characters long.');
         return false;
       }
 
