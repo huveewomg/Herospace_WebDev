@@ -212,6 +212,7 @@ a {
   height: 100vh;
   text-align: left;
   margin-left: 10vh;
+  margin-bottom: 30vh;
 }
 
 #column-right {
@@ -223,14 +224,22 @@ a {
 }
 
 #event-box {
+  align-items: right;
   border: 4px solid black;
-  width: 90%;
-  height: 50vh;
+  width: 70%;
+  height: 65vh;
+  padding: 10px;
 }
 
-#ev-name {
-  width: 80vh;
+#ev-date{
+  margin-top: 10vh;
+}
+
+#ev-details {
+  width: 60vh;
   text-align: center;
+  border-width: 2px;
+  border-color: black;
 }
 
 #ev-name {
@@ -305,4 +314,24 @@ a {
   transition: background-color 0.3s ease; /* Smooth transition for background color */
   width: 20vh;
   margin: 1vh;
+}
+
+#unavailable{
+  float: right;
+  background-color: #bf0505; 
+  color: white; 
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size of the text */
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+  border: 2px solid  #bf0505;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  width: 20vh;
+  margin: 1vh;
+}
+
+#time-picker{
+  margin-bottom: 2vh;
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2024 at 04:44 AM
+-- Generation Time: Jan 25, 2024 at 07:30 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -56,8 +56,7 @@ CREATE TABLE `charity` (
 --
 
 INSERT INTO `charity` (`charityid`, `password`, `name`) VALUES
-('C001', 'makhijau', 'persatuan mak hijau malaysia'),
-('C002', 'lgbtftw', 'persatuan lgbt islam malaysia');
+('chintimothy45@gmail.com', 'makhijau', 'Persatuan Pengakap Malaysia');
 
 -- --------------------------------------------------------
 
@@ -79,7 +78,7 @@ CREATE TABLE `comments` (
 --
 
 CREATE TABLE `events` (
-  `eventid` varchar(255) NOT NULL,
+  `event_id` varchar(255) NOT NULL,
   `event_name` varchar(255) DEFAULT NULL,
   `event_date` date DEFAULT NULL,
   `charityid` varchar(255) DEFAULT NULL,
@@ -88,16 +87,19 @@ CREATE TABLE `events` (
   `event_fee` int(11) NOT NULL,
   `event_tags` varchar(255) NOT NULL,
   `signup_link` varchar(255) NOT NULL,
-  `event_state` varchar(50) NOT NULL
+  `event_state` varchar(50) NOT NULL,
+  `event_updates` text NOT NULL,
+  `available` tinyint(1) NOT NULL,
+  `start_time` varchar(64) NOT NULL,
+  `end_time` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`eventid`, `event_name`, `event_date`, `charityid`, `event_desc`, `event_req`, `event_fee`, `event_tags`, `signup_link`, `event_state`) VALUES
-('C001', 'Larian Gey', '2024-02-10', 'C001', 'This is a description', 'These are the requirements', 10, 'charity,river,cleanup', 'bit.ly/signup/', 'KL'),
-('E002', 'isreal ', '2025-10-25', 'C001', 'This is a description', 'These are the requirements', 10, 'charity,river,cleanup', 'bit.ly/signup/', 'Perak');
+INSERT INTO `events` (`event_id`, `event_name`, `event_date`, `charityid`, `event_desc`, `event_req`, `event_fee`, `event_tags`, `signup_link`, `event_state`, `event_updates`, `available`, `start_time`, `end_time`) VALUES
+('E0', 'Testing', '2024-01-03', 'chintimothy45@gmail.com', 'desc', 'req', 90, 'Recreation', 'link', 'Kuala Lumpur', 'dwqdwqd', 0, '12:21am', '12:12am');
 
 -- --------------------------------------------------------
 
@@ -122,7 +124,7 @@ CREATE TABLE `volunteer` (
 
 INSERT INTO `volunteer` (`email`, `password`, `name`, `state`, `age`, `gender`, `bio`, `preferences`) VALUES
 ('charlie123@gmail.com', 'goodjob', 'Charlie', 'KL', 0, '', 'I love men', ''),
-('chintimothy45@gmail.com', '123', 'Yong Sheng', 'Kuala Lumpur', 20, 'Male', 'I love walks.', ',food bank,dog shelter,reforestation,cleanup,education,animal shelter,clinic,orphanage'),
+('chintimothy45@gmail.com', '123456', 'Yong Sheng', 'Kuala Lumpur', 20, 'Male', 'I love walks.', ',food bank,dog shelter,reforestation,cleanup,education,animal shelter,clinic,orphanage'),
 ('lolman@gmail.com', '123', '99999', 'KL', 20, 'Male', 'Hello', ''),
 ('V001@gmail.com', 'supbro', 'jason', '', 0, '', '', ''),
 ('V002', 'besboi', 'shan', '', 0, '', '', ''),
@@ -156,8 +158,7 @@ ALTER TABLE `comments`
 -- Indexes for table `events`
 --
 ALTER TABLE `events`
-  ADD PRIMARY KEY (`eventid`),
-  ADD KEY `charityid` (`charityid`);
+  ADD PRIMARY KEY (`event_id`);
 
 --
 -- Indexes for table `volunteer`
@@ -173,14 +174,8 @@ ALTER TABLE `volunteer`
 -- Constraints for table `comments`
 --
 ALTER TABLE `comments`
-  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`eventid`) REFERENCES `events` (`eventid`),
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`eventid`) REFERENCES `events` (`event_id`),
   ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`volunteerid`) REFERENCES `volunteer` (`email`);
-
---
--- Constraints for table `events`
---
-ALTER TABLE `events`
-  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`charityid`) REFERENCES `charity` (`charityid`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

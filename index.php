@@ -1,7 +1,7 @@
 <?php
 include('components/connection.php');
 
-$sql = "SELECT COUNT(eventID) as eventCount FROM test.events";
+$sql = "SELECT COUNT(event_id) as eventCount FROM test.events";
 $result = mysqli_query($connection, $sql);
 
 if ($result) {

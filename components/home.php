@@ -51,12 +51,11 @@ $state = $_SESSION['state'];
         else {
           $state_sql = $connection->query("SELECT * FROM events WHERE event_state = '$state'");
           while ($row2 = $state_sql->fetch_assoc()) {
-            echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php'\">" . $row2['event_name'] . "<br>" . $row2['event_date'] .
+            echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php'\">" . $row2['event_name'] . "<br>" . $row2['event_desc'] . "<br>" . $row2['event_req'] .
             "</div>";
           }
         }
         ?>
-        <br>
       </div>
     </div>
   </div>

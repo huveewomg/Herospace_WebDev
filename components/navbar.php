@@ -13,7 +13,7 @@
       <ul>
         <li><a href="#" onclick="window.location='home.php'">Home</a></li>
         <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);" style="position: relative; z-index: 9999;">
-          <a href="#">Projects &nbsp;<i class="fa fa-caret-down"></i></a>
+          <a href="#">Projects &nbsp;</a>
           <div class="dd">
             <div id="up_arrow"></div>
             <ul>
