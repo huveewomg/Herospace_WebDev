@@ -36,7 +36,8 @@ $state = $_SESSION['state'];
       <div id="column-right">
         <h1>Latest Events</h1>
         <?php while ($row1 = $result->fetch_assoc()) {
-          echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] ."</div>";
+          
+          echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_name=$row1[event_name]'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] ."</div>";
         }
         ?>
         <br>
@@ -51,7 +52,7 @@ $state = $_SESSION['state'];
         else {
           $state_sql = $connection->query("SELECT * FROM events WHERE event_state = '$state'");
           while ($row2 = $state_sql->fetch_assoc()) {
-            echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php'\">" . $row2['event_name'] . "<br>" . $row2['event_desc'] . "<br>" . $row2['event_req'] .
+            echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_name=$row2[event_name]'\">" . $row2['event_name'] . "<br>" . $row2['event_desc'] . "<br>" . $row2['event_req'] .
             "</div>";
           }
         }

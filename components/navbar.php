@@ -11,19 +11,19 @@
         <img src="../assets/img/Logo.png" alt="" id="logo" />
       </div>
       <ul>
-        <li><a href="#" onclick="window.location='home.php'">Home</a></li>
+        <li onclick="window.location='home.php'"><a href="#">Home</a></li>
         <li class="dropdown" onmouseover="hover(this);" onmouseout="out(this);" style="position: relative; z-index: 9999;">
           <a href="#">Projects &nbsp;</a>
           <div class="dd">
             <div id="up_arrow"></div>
             <ul>
-              <li><a href="#" onclick="window.location='featured-projects.php'">Featured</a></li>
+              <li onclick="window.location='featured-projects.php'"><a href="#" >Featured</a></li>
               <li><a href="#">Recent Posts</a></li>
             </ul>
           </div>
         </li>
-        <li><a href="#" onclick="window.location='about-us.php'">About Us</a></li>
-        <li><a href="#" onclick="window.location='create-event.php'">Share the Love!</a></li>
+        <li onclick="window.location='about-us.php'"><a href="#" >About Us</a></li>
+        <li onclick="window.location='create-event.php'"  ><a href="#" >Share the Love!</a></li>
       </ul>
 
       <div id="profile-logo-container">

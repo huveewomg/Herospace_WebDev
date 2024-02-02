@@ -1,16 +1,27 @@
+<?php
+session_start();
+
+//connection
+require 'connection.php';
+
+$event_name = $_GET['event_name'];
+$result = mysqli_query($connection, "SELECT * FROM events WHERE event_name = '$event_name'");
+$event_details = mysqli_fetch_row($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- Navbar Component -->
 <?php include 'navbar.php'; ?>
-<link rel="stylesheet" href="post-view.css" />`
+<link rel="stylesheet" href="post-view.css" />
 
 <body>
   <div id="post-view-navbar">
     <ul>
-      <li><a href="#" onclick="window.location='post-view-overview.php'">Overview</a></li>
-      <li><a class="active" href="#" onclick="window.location='post-view-updates.php'">Updates</a></li>
-      <li><a href="#" onclick="window.location='post-view-discussions.php'">Discussion</a></li>
+      <li><a href="#" onclick="window.location='post-view-overview.php?event_name=<?php echo $event_name;?>'">Overview</a></li>
+      <li><a class="active" href="#" onclick="window.location='post-view-updates.php?event_name=<?php echo $event_name;?>'">Updates</a></li>
+      <li><a href="#" onclick="window.location='post-view-discussions.php?event_name=<?php echo $event_name;?>'">Discussion</a></li>
     </ul>
   </div>
 
