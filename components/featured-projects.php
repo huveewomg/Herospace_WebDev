@@ -1,26 +1,24 @@
 <?php
 session_start();
-
-//connection
 require 'connection.php';
 
-//hide error messages
+// Hide error messages
 error_reporting(E_ERROR | E_PARSE);
 
-$sql = "SELECT * FROM events";
-$result = $connection->query($sql);
-$state = $_SESSION['state'];
+// Get the selected state from the dropdown
+$selectedState = isset($_GET['state']) ? $_GET['state'] : '';
 
-// Get the selected option from the dropdown
+// Get the selected option for sorting
 $selectedOption = isset($_GET['sort']) ? $_GET['sort'] : '';
 
-// Query based on the selected option
-if ($selectedOption == 'latest') {
-  $sql .= " ORDER BY event_date DESC";
-} elseif ($selectedOption == 'most_activity') {
-  $sql .= " ORDER BY event_activity DESC";
+$sql = "SELECT * FROM events";
+if (!empty($_GET["events"])) {
+  $state = $_GET['state'];
+    $sql .= " WHERE event_state = '$state'";
 }
-
+$result = $connection->query($sql);
+// Execute the SQL query
+$result = $connection->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -53,9 +51,6 @@ if ($selectedOption == 'latest') {
             echo '<option value="' . $option . '" ' . ($selected_option === $option ? 'selected' : '') . '>' . $option . '</option>';
           }
 
-          if (isset($_GET['state'])) {
-            echo $result;
-          }
           ?>
         </select>
         <button type="submit">Filter</button>
