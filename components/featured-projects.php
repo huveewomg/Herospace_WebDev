@@ -11,15 +11,33 @@ $selectedState = isset($_GET['state']) ? $_GET['state'] : '';
 // Get the selected option for sorting
 $selectedOption = isset($_GET['sort']) ? $_GET['sort'] : '';
 
+
+//Modify the SQL query based on the criteria
 $sql = "SELECT * FROM events";
-if (!empty($_GET["events"])) {
+if (!empty($_GET['state']) && !empty($_GET['date']) && !empty($_GET['fee'])) {
   $state = $_GET['state'];
-    $sql .= " WHERE event_state = '$state'";
+  $date = $_GET['date'];
+  $fee = $_GET['fee'];
+  $sql .= " WHERE event_state = '$state' AND event_date = '$date' AND event_fee = '$fee'";
+  if (!empty($_GET['sort'])) {
+    $sort = $_GET['sort'];
+    if ($sort == 'latest') {
+      $sql .= " ORDER BY event_date DESC";
+    } else if ($sort == 'most_activity') {
+      // $sql .= " ORDER BY event_participant DESC";
+    }
+  }
 }
 $result = $connection->query($sql);
 // Execute the SQL query
 $result = $connection->query($sql);
 ?>
+
+<script>
+  function clearForm() {
+    window.location.href = 'featured-projects.php';
+  }
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +53,7 @@ $result = $connection->query($sql);
     <div id="sidebar">
       <!-- Dropdown select -->
       <div>Filter By</div>
-      <form action="filter-items.php">
+      <form id="filterForm" action="">
         <input type="text" name="sort" value="<?php echo $_GET['sort']; ?>" hidden>
         <div>Date</div>
         <input type="date" name="date" id="">
@@ -54,6 +72,7 @@ $result = $connection->query($sql);
           ?>
         </select>
         <button type="submit">Filter</button>
+        <button type="button" onclick="clearForm()">Reset</button>
       </form>
 
     </div>
@@ -66,7 +85,7 @@ $result = $connection->query($sql);
       </select>
     </div>
     <?php while ($row1 = $result->fetch_assoc()) {
-      echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_name=$row1[event_name]'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] . "</div>";
+      echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] . "</div>";
     }
     ?>
   </div>

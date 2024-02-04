@@ -114,8 +114,6 @@ $availability = mysqli_fetch_row($check_available);
       <textarea id="ev-req" name="evreq" cols="30" rows="10" required></textarea><br><br>
       <div>Event Images</div>
       <input type="file" id="ev-img" name="img[]" accept="image/*" multiple required><br><br>
-      <div>Updates</div>
-      <textarea id="ev-updates" name="evupdates" cols="30" rows="10" required></textarea><br><br>
       <input type="submit" value="Submit" id="submit">
   </form>
   </div>

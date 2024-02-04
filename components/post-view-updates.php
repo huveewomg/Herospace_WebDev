@@ -4,8 +4,8 @@ session_start();
 //connection
 require 'connection.php';
 
-$event_name = $_GET['event_name'];
-$result = mysqli_query($connection, "SELECT * FROM events WHERE event_name = '$event_name'");
+$event_id = $_GET['event_id'];
+$result = mysqli_query($connection, "SELECT * FROM events WHERE event_id = '$event_id'");
 $event_details = mysqli_fetch_row($result);
 ?>
 
@@ -19,9 +19,9 @@ $event_details = mysqli_fetch_row($result);
 <body>
   <div id="post-view-navbar">
     <ul>
-      <li><a href="#" onclick="window.location='post-view-overview.php?event_name=<?php echo $event_name;?>'">Overview</a></li>
-      <li><a class="active" href="#" onclick="window.location='post-view-updates.php?event_name=<?php echo $event_name;?>'">Updates</a></li>
-      <li><a href="#" onclick="window.location='post-view-discussions.php?event_name=<?php echo $event_name;?>'">Discussion</a></li>
+      <li><a href="#" onclick="window.location='post-view-overview.php?event_id=<?php echo $event_id;?>'">Overview</a></li>
+      <li><a class="active" href="#" onclick="window.location='post-view-updates.php?event_id=<?php echo $event_id;?>'">Updates</a></li>
+      <li><a href="#" onclick="window.location='post-view-discussions.php?event_id=<?php echo $event_id;?>'">Discussion</a></li>
     </ul>
   </div>
 

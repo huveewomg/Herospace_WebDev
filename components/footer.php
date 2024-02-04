@@ -12,7 +12,6 @@
     color: gray;
     font-size: 0.8em;
     flex-shrink: 0;
-    margin-top: 100vh;
   }
 
   .footer .row {
