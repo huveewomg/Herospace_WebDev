@@ -295,6 +295,8 @@ a {
   width: 45%;
   height: 30vh;
   text-align: left;
+  overflow: auto;
+  line-height: 1.5;
 }
 
 #event-details {
@@ -311,6 +313,7 @@ a {
   margin-left: 1vh;
   background-color: aqua;
   flex-grow: 3;
+  /* image need format */
 }
 
 #requirements {

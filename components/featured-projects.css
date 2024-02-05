@@ -66,6 +66,10 @@
     margin-top: 5vh;
     margin-right: 5vh;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
   }
   
   /*ID*/

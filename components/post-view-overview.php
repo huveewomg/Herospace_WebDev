@@ -30,11 +30,11 @@ $event_details = mysqli_fetch_row($result);
   <div id="row-1">
     <div id="event-description"><?php echo $event_details[4]?></div>
     <div id="event-details">
-      <?php echo $event_details[9]?> <br>
-      <?php echo $event_details[3]?> <br>
-      <?php echo $event_details[12]?> <br>
-      <?php echo $event_details[13]?> <br>
-      <?php echo $event_details[6]?> <br>
+      <?php echo "Location: " . $event_details[9]?> <br> <br>
+      <?php echo "Organiser Email: " . $event_details[3]?> <br><br>
+      <?php echo "Start Time: " . $event_details[12]?> <br><br>
+      <?php echo "End Time: " . $event_details[13]?> <br><br>
+      <?php echo "Participation Fee: RM " . $event_details[6]?> <br><br>
     </div>
   </div>
   <div id="row-2" class="flex-container">
