@@ -32,6 +32,7 @@ $event_details = mysqli_fetch_row($result);
     <div id="event-details">
       <?php echo "Location: " . $event_details[9]?> <br> <br>
       <?php echo "Organiser Email: " . $event_details[3]?> <br><br>
+      <?php echo "Date: " . $event_details[2]?> <br><br>
       <?php echo "Start Time: " . $event_details[12]?> <br><br>
       <?php echo "End Time: " . $event_details[13]?> <br><br>
       <?php echo "Participation Fee: RM " . $event_details[6]?> <br><br>
