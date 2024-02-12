@@ -38,15 +38,16 @@ $event_details = mysqli_fetch_row($result);
       <?php echo "Participation Fee: RM " . $event_details[6]?> <br><br>
     </div>
   </div>
+  <h1 id='event-imagetxt'>Event Image</h1>
   <div id="row-2" class="flex-container">
-    <div class="column">
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>0.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <div class="event-snipshot">
+      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>0.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
     </div>
-    <div class="column">
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>1.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <div class="event-snipshot">
+      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>1.png"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
     </div>
-    <div class="column">
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>2.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <div class="event-snipshot">
+      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>2.png"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
     </div>
   </div>
 
@@ -76,12 +77,13 @@ $event_details = mysqli_fetch_row($result);
   </div>
 </div>
 
-
+  <h1 id='requirement-txt'>Requirements</h1>
   <div id="row-3">
     <div id="requirements"><?php echo $event_details[5]?></div>
   </div>
 
 
+  // Script for lightbox
 <Script>
   
 // Wrap every letter in a span

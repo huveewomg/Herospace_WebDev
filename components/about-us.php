@@ -35,11 +35,11 @@
 
       <div>
         <div id="director-img-right">
-        <a href="https://github.com/huveewomg"><img id="wongpfp" src="../assets/img/test22.jpg" alt=""></a>
+        <a href="https://github.com/huveewomg"><img id="wongpfp" src="../assets/img/test22.png" alt=""></a>
         </div>
         <div id="self-introduction-left">demo text</div>
       </div>
-
+    </div>
       <div>
       <div id="director-img-left">
           <a href="https://github.com/spacemxchi"><img id="shanpfp" src="../assets/img/profile.png" alt=""></a>
