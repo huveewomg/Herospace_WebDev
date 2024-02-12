@@ -62,7 +62,7 @@ $event_details = mysqli_fetch_row($result);
 
     <div class="mySlides">
       <div class="numbertext">2 / 3</div>
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>1.png" style="width:100% height:100%">
+      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>1.png" style="width:100%">
     </div>
 
     <div class="mySlides">
