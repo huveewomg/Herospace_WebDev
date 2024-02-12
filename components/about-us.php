@@ -27,20 +27,38 @@
     <div id="board">
       <strong>BOARD OF DIRECTORS</strong>
       <div>
-        <div id="director-img-left"></div>
+        <div id="director-img-left">
+          <a href="https://github.com/zzSleepyCoderzz"><img id= timpfp src="https://avatars.githubusercontent.com/u/73248416?v=4" alt=""></a>
+        </div>
+        <div id="self-introduction-right">test </div>
+      </div>
+
+      <div>
+        <div id="director-img-right">
+        <a href="https://github.com/huveewomg"><img id="wongpfp" src="../assets/img/test22.jpg" alt=""></a>
+        </div>
+        <div id="self-introduction-left">demo text</div>
+      </div>
+
+      <div>
+      <div id="director-img-left">
+          <a href="https://github.com/spacemxchi"><img id="shanpfp" src="../assets/img/profile.png" alt=""></a>
+        </div>
         <div id="self-introduction-right"></div>
       </div>
+
       <div>
-        <div id="director-img-right"></div>
+        <div id="director-img-right">
+        <a href="https://github.com/cookspaghetti"><img id="alexpfp" src="../assets/img/profile.png" alt=""></a>
+        </div>
         <div id="self-introduction-left"></div>
       </div>
-      <div>
-        <div id="director-img-left"></div>
-        <div id="self-introduction-right"></div>
-      </div>
-      <div>
-        <div id="director-img-right"></div>
-        <div id="self-introduction-left"></div>
-      </div>
+
   </body>
+  
+
+<div style="zoom: 0.4">
+  <?php include 'footer.php'; ?>
+</div>
+
 </html>

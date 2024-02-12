@@ -285,7 +285,11 @@
     height: 20vh;
     background-color: aqua;
     margin-bottom: 3vh;
-    clear: left; /* Add this line */
+    clear: left; 
+    cursor: pointer;
+    overflow: hidden;
+
+    
   }
   
   #self-introduction-right{
@@ -303,7 +307,10 @@
     height: 20vh;
     background-color: rgb(255, 0, 183);
     margin-bottom: 3vh;
-    clear: right; /* Add this line */
+    clear: right;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: -50px;
   }
   
   #self-introduction-left{
@@ -313,6 +320,24 @@
     height: 20vh;
     margin-bottom: 3vh;
   }
+ 
+ #timpfp{
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+ } 
+
+#wongpfp {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  zoom: 2.5;
+}
   
+#shanpfp{
+
+}
+
+#alexpfp{
   
-  
+}
