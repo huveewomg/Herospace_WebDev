@@ -3,7 +3,7 @@
     clear: both;
     position: relative;
     left: 0;
-    bottom: 0;
+    bottom: -400;
     width: 100%;
     background: #000;
     padding: 30px 0px;

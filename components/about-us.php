@@ -54,11 +54,12 @@
         <div id="self-introduction-left"></div>
       </div>
 
+      <footer>
+        <?php include 'footer.php'; ?>
+      </footer>
   </body>
   
 
-<div style="zoom: 0.4">
-  <?php include 'footer.php'; ?>
-</div>
+
 
 </html>

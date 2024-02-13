@@ -13,23 +13,21 @@ $selectedOption = isset($_GET['sort']) ? $_GET['sort'] : '';
 
 
 //Modify the SQL query based on the criteria
-$sql = "SELECT * FROM events";
+$sql = "SELECT * FROM `events` ORDER BY `event_date` DESC";
 if (!empty($_GET['state']) && !empty($_GET['date']) && !empty($_GET['fee'])) {
   $state = $_GET['state'];
   $date = $_GET['date'];
   $fee = $_GET['fee'];
   $sql .= " WHERE event_state = '$state' AND event_date = '$date' AND event_fee = '$fee'";
-  if (!empty($_GET['sort'])) {
-    $sort = $_GET['sort'];
-    if ($sort == 'latest') {
-      $sql .= " ORDER BY event_date DESC";
-    } else if ($sort == 'most_activity') {
-      // $sql .= " ORDER BY event_participant DESC";
-    }
+}
+if (!empty($_GET['sort'])) {
+  $sort = $_GET['sort'];
+  if ($sort == 'latest') {
+    $sql = "SELECT * FROM `events` ORDER BY `event_date` DESC";
+  } else if ($sort == 'most_activity') {
+    $sql = "SELECT * FROM `events` ORDER BY `event_fee` ASC";
   }
 }
-$result = $connection->query($sql);
-// Execute the SQL query
 $result = $connection->query($sql);
 ?>
 
@@ -52,14 +50,14 @@ $result = $connection->query($sql);
   <div id="column-left">
     <div id="sidebar">
       <!-- Dropdown select -->
-      <div>Filter By</div>
+      <div class='filter-txt'>Filter By: </div> <br> <br>
       <form id="filterForm" action="">
-        <input type="text" name="sort" value="<?php echo $_GET['sort']; ?>" hidden>
-        <div>Date</div>
+        <input type="text" name="sort" value="<?php echo $_GET['sort']; ?>" hidden> 
+        <div class='filter-txt'>Date</div>
         <input type="date" name="date" id="">
-        <div>Participation Fee</div>
+        <div class='filter-txt'>Participation Fee</div>
         <input type="text" name="fee" id="">
-        <div>State</div>
+        <div class='filter-txt'>State</div>
         <select id="dropdown" name="state" style="border-width: 2px;border-color: black; margin-bottom:2vh;">
           <?php
           $options = array('Kedah', 'Kelantan', 'Malacca', 'Negeri Sembilan', 'Pahang', 'Penang', 'Perak', 'Perlis', 'Sabah', 'Sarawak', 'Selangor', 'Terengganu', 'Johor', 'Kuala Lumpur', 'Labuan', 'Putrajaya');
@@ -84,11 +82,57 @@ $result = $connection->query($sql);
         <option value="featured-projects.php?sort=most_activity" <?php echo ($selectedOption == 'most_activity') ? 'selected' : ''; ?>>Most Activity</option>
       </select>
     </div>
-    <?php while ($row1 = $result->fetch_assoc()) {
-      echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] . "</div>";
-    }
-    ?>
+    <?php
+
+      $rows_per_page = 5; // Set the number of results per page
+
+      $total_rows = mysqli_num_rows($result); // Get the total number of rows
+
+      $num_pages = ceil($total_rows / $rows_per_page); // Calculate the number of pages
+
+      // Get the current page number from URL or use 1 as default
+      $current_page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+      // Modify your original query with LIMIT and OFFSET based on page number
+      $offset = ($current_page - 1) * $rows_per_page;
+      $sql = "SELECT * FROM events LIMIT $rows_per_page OFFSET $offset";
+      $result = $connection->query($sql); // Execute the modified query
+
+      // Display the results with a loop
+      while ($row1 = $result->fetch_assoc()) {
+        echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] . "</div>";
+      }
+
+      // Add pagination buttons if there are multiple pages
+      if ($num_pages > 1) {
+        echo "<div class='pagination'>";
+        // Previous button
+        if ($current_page > 1) {
+          echo "<a href='?page=" . ($current_page - 1) . "'>Previous</a>";
+        }
+        // Page numbers
+        for ($i = 1; $i <= $num_pages; $i++) {
+          if ($i == $current_page) {
+            echo "<a class='active' href='?page=$i'>$i</a>";
+          } else {
+            echo "<a href='?page=$i'>$i</a>";
+          }
+        }
+        // Next button
+        if ($current_page < $num_pages) {
+          echo "<a href='?page=" . ($current_page + 1) . "'>Next</a>";
+        }
+        echo "</div>";
+      }
+
+      ?>
+
   </div>
+<script src="homescript.js"></script>
+    <footer>
+      <?php include 'footer.php'; ?>
+    </footer>
 </body>
+
 
 </html>
