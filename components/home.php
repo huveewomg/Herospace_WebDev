@@ -46,8 +46,8 @@ $result = $connection->query($sql);
 
 <body>
   <div style="position: relative;">
-    <img id="home-cover" src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/UHEUMBOZ3JNKPDFPX3IEPHOPCI.jpg">
-    <button id="host-event">
+    <img id="home-cover" src="../assets/img/homepic.webp">
+    <button id="host-event" onclick="window.location.href='create-event.php'">
       Host an Event
     </button>
   </div>

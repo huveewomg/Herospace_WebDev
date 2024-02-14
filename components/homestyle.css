@@ -231,6 +231,7 @@ a {
   height: 80vh;
   width: 100%;
   overflow-x: hidden;
+  opacity: 0.75;
 }
 
 #host-event {

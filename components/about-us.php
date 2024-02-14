@@ -4,6 +4,9 @@
 <!-- Navbar Component -->
 <?php include 'navbar.php'; ?>
 <link rel="stylesheet" href="about-us.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
 
 
   <body>
@@ -14,7 +17,11 @@
       </div>
       
       <div id="awards">
-        one two three four // maybe can add some random award logo
+        <img src="../assets/img/award7.jpg" alt="">
+        <img src="../assets/img/award3.png" alt="">
+        <img src="../assets/img/award4.png" alt="">
+        <img src="../assets/img/award5.png" alt="">
+        <img src="../assets/img/award6.png" alt="">
       </div>
     
       <div id="slogan">
@@ -92,13 +99,6 @@
 
     <script src="homescript.js"></script>
   </body>
-  <!-- 
-    check if script feature working
-    check gemini for introduction
-    check if footer is working
-    
--->
-
 
 
 </html>

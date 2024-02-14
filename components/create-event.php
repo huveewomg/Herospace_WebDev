@@ -112,7 +112,7 @@ $availability = mysqli_fetch_row($check_available);
       <textarea id="ev-desc" name="evdesc" cols="30" rows="10" required></textarea><br><br>
       <div>Event Requirements</div>
       <textarea id="ev-req" name="evreq" cols="30" rows="10" required></textarea><br><br>
-      <div>Event Images</div>
+      <div>Event Images (Horizontal Images are recommended)</div>
       <input type="file" id="ev-img" name="img[]" accept="image/*" multiple required><br><br>
       <input type="submit" value="Submit" id="submit">
   </form>
