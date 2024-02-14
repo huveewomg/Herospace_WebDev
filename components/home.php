@@ -41,7 +41,12 @@ $result = $connection->query($sql);
 <html lang="en">
 
 <!-- Navbar Component -->
-<?php include 'navbar.php'; ?>
+<?php
+if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
+  include 'admin navbar.php';
+} else {
+  include 'navbar.php';
+} ?>
 <link rel="stylesheet" href="homestyle.css" />
 
 <body>
@@ -60,7 +65,7 @@ $result = $connection->query($sql);
     <div id="events-column">
       <div id="column-right">
         <h1>Latest Events</h1>
-        <?php 
+        <?php
         $count = 0; // count number of posts
         while ($row1 = $result->fetch_assoc()) {
           if ($count < 3) { // Check if the post is less than 3
@@ -78,7 +83,7 @@ $result = $connection->query($sql);
           echo "<div class='no-events scrollFade'>" . "No events in your area.<br><br>Update your location in the Profile Page." .
             "</div>";
         } else {
-          $state_sql = $connection->query("SELECT * FROM events WHERE event_state = '$state' ORDER BY event_id DESC LIMIT 3"); 
+          $state_sql = $connection->query("SELECT * FROM events WHERE event_state = '$state' ORDER BY event_id DESC LIMIT 3");
           while ($row2 = $state_sql->fetch_assoc()) {
             echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row2[event_id]'\">" . $row2['event_name'] . "<br>" . $row2['event_desc'] . "<br>" . $row2['event_req'] .
               "</div>";

@@ -66,7 +66,7 @@ h2 {
 
 /*ID*/
 #loginBt {
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-left: 20vh;
   vertical-align: middle;
   display: inline-block;
@@ -77,7 +77,7 @@ h2 {
   text-align: center;
   font-size: 16px;
   padding: 2vh;
-  width: 12vh;
+  width: 25vh;
   transition: all 0.5s;
   cursor: pointer;
   font-family: "Roboto Condensed";
@@ -108,48 +108,6 @@ h2 {
   right: 0;
 }
 
-#guestBt {
-  margin-top: 10vh;
-  margin-left: 10vh;
-  vertical-align: middle;
-  display: inline-block;
-  border-radius: 15px;
-  background-color: #000000;
-  border: none;
-  color: #ffffff;
-  text-align: center;
-  font-size: 16px;
-  padding: 2vh;
-  width: 15rem;
-  transition: all 0.5s;
-  cursor: pointer;
-  font-family: "Roboto Condensed";
-}
-
-#guestBt span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#guestBt span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-#guestBt:hover span {
-  padding-right: 20px;
-}
-
-#guestBt:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 
 #hero-text{
   height: 10vh;

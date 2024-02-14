@@ -1,8 +1,24 @@
+<?php
+session_start();
+
+//connection
+require 'connection.php';
+
+//hide error messages
+error_reporting(E_ERROR | E_PARSE);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- Navbar Component -->
-<?php include 'navbar.php'; ?>
+<?php
+if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
+  include 'admin navbar.php';
+} else {
+  include 'navbar.php';
+} ?>
+
 <link rel="stylesheet" href="about-us.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

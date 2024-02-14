@@ -13,6 +13,7 @@ require('connection.php');
 <body>
     <form action="save-update.php">
         <div>Updates</div>
+        <input type="text" name="event_id" value="<?php echo $_GET['event_id']?>" hidden>
         <textarea id="ev-updates" name="evupdates" cols="30" rows="10" required></textarea><br><br>
         <input type="submit" value="Submit" id="submit">
     </form>
@@ -21,5 +22,5 @@ require('connection.php');
   <!-- Footer Component -->
   <?php include 'footer.php'; ?>
 </div>
-
+  
 </html>

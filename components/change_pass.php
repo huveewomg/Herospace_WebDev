@@ -15,7 +15,12 @@ $password = $result['password'];
 <html lang="en">
 
 <!-- Navbar Component -->
-<?php include 'navbar.php'; ?>
+<?php
+if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
+  include 'admin navbar.php';
+} else {
+  include 'navbar.php';
+} ?>
 <link rel="stylesheet" href="change_pass.css" />
 
 <body>
@@ -39,7 +44,7 @@ $password = $result['password'];
       <p>Change your password here.</p>
       <hr />
       <div><strong>Old Password</strong></div>
-      <input class="password" type="password" name="oldpass" id="oldpass"/>
+      <input class="password" type="password" name="oldpass" id="oldpass" />
       <div><strong>New Password</strong></div>
       <input class="password" type="password" name="newpass" id="newpass" />
       <div><strong>Confirm Password</strong></div>
@@ -81,7 +86,7 @@ $password = $result['password'];
         alert('New Password must contain at least 1 letter, 1 number, and 1 special character.');
         return false;
       }
-      
+
       // If all validations pass, allow form submission
       return true;
 

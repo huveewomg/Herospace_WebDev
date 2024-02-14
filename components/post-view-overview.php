@@ -14,7 +14,11 @@ $event_details = mysqli_fetch_row($result);
 <html lang="en">
 
 <!-- Navbar Component -->
-<?php include 'navbar.php'; ?>
+<?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
+  include 'admin navbar.php';
+} else {
+  include 'navbar.php';
+} ?>
 <link rel="stylesheet" href="post-view.css" />
 
 <body>
@@ -27,6 +31,11 @@ $event_details = mysqli_fetch_row($result);
   </div>
   <h1 id="event-name"><?php echo $event_details[1] ?></h1>
   <a href="<?php echo $event_details[8]?>" target="_blank"><button id="join-event" on>Join Event</button></a>
+  <?php 
+  if($_SESSION['status'] == 'charity'){
+    echo "<a href='create-updates.php?event_id=$event_id'><button id='edit-event'>Edit Event</button></a>";
+  }
+  ?>
   <div id="row-1">
     <div id="event-description"><?php echo $event_details[4]?></div>
     <div id="event-details">

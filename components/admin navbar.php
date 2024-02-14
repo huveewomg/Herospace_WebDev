@@ -2,7 +2,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Herospace</title>
-  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="admin navbar.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="icon" type="image/png" href="../assets/favicon_io/favicon-16x16.png" />
   <div id="container">
@@ -23,6 +23,7 @@
           </div>
         </li>
         <li onclick="window.location='about-us.php'"><a href="#" >About Us</a></li>
+        <li onclick="window.location='create-event.php'"  ><a href="#" >Share the Love!</a></li>
       </ul>
 
       <div id="profile-logo-container">
@@ -31,7 +32,6 @@
             person
           </span>
           <div class="dropdown-content">
-            <li onclick="window.location = 'profile.php'">Profile</li>
             <li onclick="window.location = 'logout.php'">Logout</li>
           </div>
         </div>

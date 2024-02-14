@@ -14,7 +14,11 @@ $result = mysqli_query($connection, "SELECT * FROM comments WHERE event_id = '$e
 <html lang="en">
 
 <!-- Navbar Component -->
-<?php include 'navbar.php'; ?>
+<?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
+  include 'admin navbar.php';
+} else {
+  include 'navbar.php';
+} ?>
 <link rel="stylesheet" href="post-view.css" />
 
 <body>

@@ -40,15 +40,17 @@ mysqli_close($connection);
       <img id="logo" src="assets/img/Logo.png" alt="Logo">
       <h1>BE A <span id="hero-text">HERO</span> FOR A DAY</h1>
       <h2>Together, we can change the lives of millions in Malaysia!</h2>
-      <button id="loginBt" type="submit" onclick="window.location.href='components/login.php'"><span>Login</span></button>
-      <button id="guestBt" type="submit" onclick="window.location.href='components/login.php'"><span>Continue as Guest</span></button>
+      <button id="loginBt" type="submit" onclick="window.location.href='components/login.php'"><span>Continue to Site</span></button>
       <div id="stats-title">
         <p id="stats-title-p">STATISTICS</p>
       </div>
       <div id="stats">
         <p>EVENTS HOSTED</p>
         <div id="eventCounter">0</div>
+        <p>KIDS HELPED</p>
+        <div>INFINITE</div>
       </div>
+      
     </div>
 
     <script>
