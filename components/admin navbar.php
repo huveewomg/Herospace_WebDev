@@ -18,7 +18,7 @@
             <div id="up_arrow"></div>
             <ul>
               <li onclick="window.location='featured-projects.php'"><a href="#" >Featured</a></li>
-              <li><a href="#">Recent Posts</a></li>
+              <li onclick="window.location='recent-posts.php'"><a href="#">Recent Posts</a></li>
             </ul>
           </div>
         </li>

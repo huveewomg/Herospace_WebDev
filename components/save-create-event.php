@@ -21,6 +21,7 @@ $evreq = $_POST['evreq'];
 $evdate = $_POST['date'];
 $startTime = $_POST['startHour'] . ":" . $_POST['startMinute'] . "" . $_POST['startampm'];
 $endTime = $_POST['endHour'] . ":" . $_POST['endMinute'] . "" . $_POST['endampm'];
+$date_created = date("Y-m-d");
 
 //Saving snipshots
 if (isset($_FILES['img']) && !empty($_FILES['img']['name'])) {
@@ -43,7 +44,7 @@ if (isset($_FILES['img']) && !empty($_FILES['img']['name'])) {
 }
 
 
-$result1 = mysqli_query($connection, "INSERT INTO events (event_id, event_name, event_date, charityid, event_desc, event_req, event_fee, event_tags, signup_link, event_state, start_time, end_time) VALUES ('$event_id' , '$evname', '$evdate', '$charityid', '$evdesc', '$evreq', $fee, '$tagsString', '$link', '$location', '$startTime', '$endTime');");
+$result1 = mysqli_query($connection, "INSERT INTO events (event_id, event_name, event_date, charityid, event_desc, event_req, event_fee, event_tags, signup_link, event_state, start_time, end_time, date_created) VALUES ('$event_id' , '$evname', '$evdate', '$charityid', '$evdesc', '$evreq', $fee, '$tagsString', '$link', '$location', '$startTime', '$endTime', '$date_created');");
 
 if ($result1) {
     echo "<script>alert('Event added successfully!');window.location.href='create-event.php';</script>";

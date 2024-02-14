@@ -5,26 +5,11 @@ require 'connection.php';
 // Hide error messages
 error_reporting(E_ERROR | E_PARSE);
 
-// Get the selected state from the dropdown
-$selectedState = isset($_GET['state']) ? $_GET['state'] : '';
 
 //Modify the SQL query based on the criteria
-$sql = "SELECT * FROM `events` ORDER BY `event_fee` DESC";
-if (!empty($_GET['state']) && !empty($_GET['date']) && !empty($_GET['fee'])) {
-  $state = $_GET['state'];
-  $date = $_GET['date'];
-  $fee = $_GET['fee'];
-  $sql .= " WHERE event_state = '$state' AND event_date = '$date' AND event_fee = '$fee'";
-}
-
+$sql = "SELECT * FROM events ORDER BY date_created ASC";
 $result = $connection->query($sql);
 ?>
-
-<script>
-  function clearForm() {
-    window.location.href = 'featured-projects.php';
-  }
-</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,41 +20,14 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 } else {
   include 'navbar.php';
 } ?>
-<link rel="stylesheet" href="featured-projects.css" />
+<link rel="stylesheet" href="recent-posts.css" />
 
 <body>
   <div id="banner">
     Banner
   </div>
-  <div id="column-left">
-    <div id="sidebar">
-      <!-- Dropdown select -->
-      <div class='filter-txt'>Filter By: </div> <br> <br>
-      <form id="filterForm" action="">
-        <input type="text" name="sort" value="<?php echo $_GET['sort']; ?>" hidden> 
-        <div class='filter-txt'>Date</div>
-        <input type="date" name="date" id="">
-        <div class='filter-txt'>Participation Fee</div>
-        <input type="text" name="fee" id="">
-        <div class='filter-txt'>State</div>
-        <select id="dropdown" name="state" style="border-width: 2px;border-color: black; margin-bottom:2vh;">
-          <?php
-          $options = array('Kedah', 'Kelantan', 'Malacca', 'Negeri Sembilan', 'Pahang', 'Penang', 'Perak', 'Perlis', 'Sabah', 'Sarawak', 'Selangor', 'Terengganu', 'Johor', 'Kuala Lumpur', 'Labuan', 'Putrajaya');
-
-          // Generate options dynamically
-          foreach ($options as $option) {
-            echo '<option value="' . $option . '" ' . ($selected_option === $option ? 'selected' : '') . '>' . $option . '</option>';
-          }
-
-          ?>
-        </select>
-        <button type="submit">Filter</button>
-        <button type="button" onclick="clearForm()">Reset</button>
-      </form>
-
-    </div>
   </div>
-  <div id="column-right">
+  <div id="main-column">
     <?php
 
       $rows_per_page = 5; // Set the number of results per page
@@ -88,7 +46,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 
       // Display the results with a loop
       while ($row1 = $result->fetch_assoc()) {
-        echo "<script>console.log($row1)</script>";
+        echo "<script>console.log($row1[date_created])</script>";
         echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] . "</div>";
       }
 
@@ -117,11 +75,8 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
       ?>
 
   </div>
-<script src="homescript.js"></script>
-    <footer>
-      <?php include 'footer.php'; ?>
-    </footer>
+
+  <?php include 'footer.php'; ?>
+
 </body>
-
-
 </html>

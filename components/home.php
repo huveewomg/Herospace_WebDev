@@ -52,7 +52,12 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 <body>
   <div style="position: relative;">
     <img id="home-cover" src="../assets/img/homepic.webp">
-    <button id="host-event" onclick="window.location.href='create-event.php'">
+    <button id="host-event" onclick="window.location.href='<?php
+                                                            if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
+                                                              echo 'create-event.php';
+                                                            } else {
+                                                              echo 'register-charity.php';
+                                                            } ?>'">
       Host an Event
     </button>
   </div>
