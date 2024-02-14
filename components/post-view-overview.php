@@ -83,7 +83,7 @@ $event_details = mysqli_fetch_row($result);
   </div>
 
 
-  // Script for lightbox
+  <!-- script for lightbox -->
 <Script>
   
 // Wrap every letter in a span

@@ -244,7 +244,9 @@
     height: 100px;
     margin: auto;
     text-align: center;
-    border: 4px solid #333
+    border: 4px solid #333;
+    font-size: 7vh;
+    
   }
   
   #introduction{
@@ -255,21 +257,55 @@
     text-align: center;
     border: 4px solid #333
   }
+
+  #introduction p{
+    font-size: 2.3vh;
+    text-align: left;
+    line-height: 1.5;
+    padding: 2vh;
+  }
+
+  #introduction h1{
+    font-family: Poppins,sans-serif;
+  }
+
+  #introduction ul {
+    list-style-position: inside;
+    text-align: left;
+    font-size: 2.3vh;
+    line-height: 1.5;
+    padding: 2vh;
+ }
   
+ /* image box */
   #column-left{
     float: left;
     width: 45%;
     height: 90vh;
     background-color: antiquewhite;
   }
-  
+
+  #column-left img{
+    width: 100%;
+    height: 100%;
+  }
+ 
+  /* story box */
   #column-right{
     float: right;
     width: 45%;
     height: 90vh;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+  }
+
+  #column-right p{
+    font-size: 2.3vh;
+    text-align: left;
+    line-height: 1.5;
+    padding: 2vh;
   }
   
+  /* director board */
   #board{
     width: 90%;
     margin-left: 10vh;
@@ -287,9 +323,7 @@
     margin-bottom: 3vh;
     clear: left; 
     cursor: pointer;
-    overflow: hidden;
-
-    
+    overflow: hidden; 
   }
   
   #self-introduction-right{
@@ -300,7 +334,7 @@
     margin-bottom: 3vh;
   }
   
-  #director-img-right {
+  #director-img-right{
     float: right;
     border-radius: 50%;
     width: 20vh;
@@ -331,7 +365,6 @@
   border-radius: 50%;
   width: 100%;
   height: 100%;
-  zoom: 2.5;
 }
   
 #shanpfp{

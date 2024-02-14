@@ -62,14 +62,15 @@
     float: right;
     width: 90%;
     height:  20vh;
-    background-color: rgb(0, 191, 255);
+    background-color:white;
     margin-top: 5vh;
-    margin-right: 5vh;
+    margin-right: 25vh;
     cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 3;
+    border: 1px solid #ddd;
   }
   
   /*ID*/
@@ -250,6 +251,7 @@
     width: 27vh;
     height: 80vh;
     background-color: #B4D4FF;
+    margin-left: 20vh;
   }
 
   #filter{
@@ -257,10 +259,10 @@
     height: 5vh;
     width: 90%;
     margin-top: 10vh;
-    margin-right: 5vh;
+    margin-right: 25vh;
     clear: both;
     text-align: right;
-    background-color: seagreen;
+    /* background-color: seagreen; */
     font-size: larger;
   }
   
@@ -268,6 +270,7 @@
   .pagination {
     display: inline-block;
     margin-top: 35px;
+    align-items: center;
   }
   
   .pagination a {
@@ -296,4 +299,3 @@
     border: 1px solid #ddd; /* Gray */
   }
 
-  
