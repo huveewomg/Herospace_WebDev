@@ -9,7 +9,7 @@ error_reporting(E_ERROR | E_PARSE);
 
 $state = $_SESSION['state'];
 
-$sql = "SELECT * FROM events ORDER BY event_id DESC";
+$sql = "SELECT * FROM events";
 $whereClause = ""; // Initialize the WHERE clause
 
 if (!empty($_GET['search'])) {
@@ -68,30 +68,43 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
   <div>
 
     <div id="events-column">
+
+      <!-- All Events -->
       <div id="column-right">
         <h1>Latest Events</h1>
         <?php
-        $count = 0; // count number of posts
-        while ($row1 = $result->fetch_assoc()) {
-          if ($count < 3) { // Check if the post is less than 3
-            echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] . "</div>";
-            $count++;
+        if ($result->num_rows == 0) {
+          echo "<div class='no-events scrollFade' onclick='window.location=\"home.php\"'>" . "No events listed under those tags.<br><br> Popular tags: beach, reforestation, river..." .
+            "</div>";
+        } else {
+          $count = 0; // count number of posts
+          while ($row1 = $result->fetch_assoc()) {
+            if ($count < 3) { // Check if the post is less than 3
+              $charity_name = $connection->query("SELECT name FROM charity WHERE charityid = '$row1[charityid]';");
+              $charity_name = $charity_name->fetch_assoc();
+              echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\"><div id='event-title'>" . $row1['event_name'] . "</div> Hosted By: " . $charity_name['name'] . "<br> Date: " . $row1['event_date'] . "<br> Time: " . $row1['start_time'] . "<br> Participation Fee: RM" . $row1['event_fee'] . "</div>";
+              $count++;
+            }
           }
         }
         ?>
         <br>
       </div>
+
+      <!-- Events based on Area -->
       <div id="column-left">
         <h1>Events from your area</h1>
         <?php
-        if ($_SESSION['state'] == null) {
+        $state_sql = $connection->query("SELECT * FROM events WHERE event_state = '$state' ORDER BY event_id DESC LIMIT 3");
+
+        if ($_SESSION['state'] == null || $state_sql->num_rows == 0) {
           echo "<div class='no-events scrollFade'>" . "No events in your area.<br><br>Update your location in the Profile Page." .
             "</div>";
         } else {
-          $state_sql = $connection->query("SELECT * FROM events WHERE event_state = '$state' ORDER BY event_id DESC LIMIT 3");
           while ($row2 = $state_sql->fetch_assoc()) {
-            echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row2[event_id]'\">" . $row2['event_name'] . "<br>" . $row2['event_desc'] . "<br>" . $row2['event_req'] .
-              "</div>";
+            $charity_name = $connection->query("SELECT name FROM charity WHERE charityid = '$row2[charityid]';");
+            $charity_name = $charity_name->fetch_assoc();
+            echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row2[event_id]'\"><div id='event-title'>" . $row2['event_name'] . "</div> Hosted By: " . $charity_name['name'] . "<br> Date: " . $row2['event_date'] . "<br> Time: " . $row2['start_time'] . "<br> Participation Fee: RM" . $row2['event_fee'] . "</div>";
           }
         }
         ?>
