@@ -78,7 +78,7 @@ body {
   margin-top: 5vh;
 }
 
-#event-imagetxt{
+#event-imagetxt{ 
   font-size: 48px;
   margin-left: 10vh;
   margin-top: 5vh;
@@ -86,7 +86,7 @@ body {
 
 #requirement-txt{
   font-size: 48px;
-  margin-left: 5vh;
+  margin-left: 10vh;
   margin-top: 5vh;
 }
 
@@ -141,9 +141,10 @@ body {
 
 #row-2 {
   justify-content: center;
-  padding: 10vh;
+  padding: 5vh;
   height: 50vh;
   display: flex;
+
 }
 
 #row-3 {
@@ -159,7 +160,7 @@ body {
   height: 30vh;
   text-align: left;
   overflow: auto;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 #event-details {
@@ -185,35 +186,10 @@ body {
   text-align: left;
   overflow: auto;
   line-height: 1.5;
+  margin-left: 5vh;
 }
 
-/* Updates */
-.row {
-  display: -ms-flexbox; 
-  display: flex;
-  -ms-flex-wrap: wrap; 
-  flex-wrap: wrap;
-  padding: 0 4px;
-  margin-left: 150px;
-}
 
-.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column {
-  float: left;
-  width: 25%;
-  margin-bottom: 10px;
-  animation-name: transition;
-  animation-duration: 1s;
-}
 
 @keyframes transition {
   from {opacity: 0;}

@@ -75,6 +75,10 @@ $result = $connection->query($sql);
     }
   }
   ?>
+  <footer style='margin-top:35vh'>
+    <?php include 'footer.php'; ?>
+  </footer>
 </body>
+
 
 </html>
