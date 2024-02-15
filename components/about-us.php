@@ -80,7 +80,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
         <strong>BOARD OF DIRECTORS</strong>
         <div>
           <div id="director-img-left">
-            <a href="https://github.com/zzSleepyCoderzz"><img id= timpfp src="../assets/profile-pics/Lolman.png" alt=""></a>
+            <a href="https://github.com/zzSleepyCoderzz"><img id= timpfp src="https://avatars.githubusercontent.com/u/73248416?v=4" alt=""></a>
           </div>
           <div id="self-introduction-right">Lead Developer</div>
         </div>

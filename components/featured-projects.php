@@ -39,18 +39,18 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 
 <body>
   <div id="banner">
-    Banner
+    <!-- <img src="../assets/img/banner.webp" alt=""> -->
   </div>
   <div id="column-left">
     <div id="sidebar">
       <!-- Dropdown select -->
-      <div class='filter-txt'>Filter By: </div> <br> <br>
+      <div class='filter-txt'>Filter By: </div> 
       <form id="filterForm" action="">
-        <input type="text" name="sort" value="<?php echo $_GET['sort']; ?>" hidden> 
+        <input id='hidden' type="text" name="sort" value=" <?php echo $_GET['sort']; ?>" hidden> 
         <div class='filter-txt'>Date</div>
-        <input type="date" name="date" id="">
+        <input type="date" name="date" id="sidebar-box"> 
         <div class='filter-txt'>Participation Fee</div>
-        <input type="text" name="fee" id="">
+        <input type="text" name="fee" id="sidebar-box"> 
         <div class='filter-txt'>State</div>
         <select id="dropdown" name="state" style="border-width: 2px;border-color: black; margin-bottom:2vh;">
           <?php
@@ -63,8 +63,8 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 
           ?>
         </select>
-        <button type="submit">Filter</button>
-        <button type="button" onclick="clearForm()">Reset</button>
+        <button type="submit" id='btn'>Filter</button>
+        <button type="button" onclick="clearForm()" id='btn'>Reset</button>
       </form>
 
     </div>

@@ -322,7 +322,7 @@ body {
 }
 
 
-img:not(.logo-container):not(#logo-container img) {
+img:not(.logo-container):not(#logo-container img):not(.mySlides img) {
   width: 500px;
   height: 250px;
   margin-bottom: 0;

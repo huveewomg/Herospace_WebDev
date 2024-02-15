@@ -48,7 +48,7 @@ mysqli_close($connection);
         <p>EVENTS HOSTED</p>
         <div id="eventCounter">0</div>
         <p>KIDS HELPED</p>
-        <div>INFINITE</div>
+        <div style='font-size: 35px'>INFINITE</div>
       </div>
       
     </div>
