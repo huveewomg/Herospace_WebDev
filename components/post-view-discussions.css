@@ -1,0 +1,136 @@
+/*Default classes*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ffffff;
+  font-family: "Raleway", sans-serif;
+}
+
+/*Fonts*/
+@font-face {
+  font-family: "auraregular";
+  src: url("../fonts/aura_regular-webfont.woff2") format("woff2"),
+    url("../fonts/aura_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "smooch_sansthin";
+  src: url("../fonts/smoochsans-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("../fonts/smoochsans-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Classes*/
+
+/* navbar */
+#post-view-navbar {
+  background-color: black;
+}
+#post-view-navbar > ul {
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 10vh;
+  border: none;
+  overflow: hidden;
+  background-color: #858585;
+}
+
+#post-view-navbar > ul > li {
+  float: left;
+}
+
+#post-view-navbar > ul > li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#post-view-navbar > ul > li a:hover:not(.active) {
+  background-color: #ffffff;
+}
+
+#post-view-navbar > ul > li a.active {
+  background-color: #00e5fa;
+}
+
+/* Messages */
+
+#profile-pic {
+  float: left;
+  height: 10vh;
+  width: 10vh;
+  clear: right;
+  margin-left: 40vh;
+  margin-top: -20vh;
+  border-radius: 50%;
+}
+
+#comment {
+  clear: both;
+  float: right;
+  background-color: aqua;
+  width: 130vh;
+  height: 15vh;
+  margin-right: 20vh;
+  margin-bottom: 5vh;
+}
+
+#comment-row {
+  margin-left: 40vh;
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+  margin-top: 25vh;
+}
+
+#comment-textarea {
+  width: 87%;
+  border-width: 2px;
+  border-color: black;
+  resize: none;
+  padding: 5px;
+}
+
+#submit-button {
+  margin-right: 20vh;
+  margin-bottom: 10vh;
+  float: right;
+  background-color: #000000; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size of the text */
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+  border: 2px solid black;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+#submit-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid black;
+}
+
+#delete-button {
+  float: right;
+  margin-right: 3vh;
+  background-color: #ff0000; /* Green background color */
+  color: white; /* White text color */
+  padding: 8px 15px; /* Padding for the button */
+  font-size: 12px; /* Font size of the text */
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease;
+}

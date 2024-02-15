@@ -19,7 +19,7 @@ $event_details = mysqli_fetch_row($result);
 } else {
   include 'navbar.php';
 } ?>
-<link rel="stylesheet" href="post-view.css" />
+<link rel="stylesheet" href="post-view-overview.css" />
 
 <body>
 <div id="post-view-navbar" style="margin-bottom: 10vh;">

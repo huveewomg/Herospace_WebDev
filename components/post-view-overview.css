@@ -188,67 +188,6 @@ body {
 }
 
 /* Updates */
-
-
-/* Messages */
-
-#profile-pic {
-  float: left;
-  background-color: black;
-  height: 5vh;
-  width: 5vh;
-  clear: right;
-  margin-left: 35vh; 
-  margin-top: -20vh;
-}
-
-#comment {
-  clear: both;
-  float: right;
-  background-color: aqua;
-  width: 130vh;
-  height: 15vh;
-  margin-right: 20vh;
-  margin-bottom: 5vh;
-}
-
-#comment-row {
-  margin-left: 40vh;
-  font-family: "auraregular";
-  letter-spacing: 0.5px;
-  margin-top: 25vh;
-}
-
-#comment-textarea {
-  width: 87%;
-  border-width: 2px;
-  border-color: black;
-  resize: none;
-  padding: 5px;
-}
-
-#submit-button {
-  margin-right: 20vh;
-  margin-bottom: 10vh;
-  float: right;
-  background-color: #000000; /* Green background color */
-  color: white; /* White text color */
-  padding: 10px 20px; /* Padding for the button */
-  font-size: 16px; /* Font size of the text */
-  font-family: "auraregular";
-  letter-spacing: 0.5px;
-  border: 2px solid black;
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Cursor style on hover */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-#submit-button:hover {
-  color: #000000;
-  background-color: #ffffff;
-  border: 2px solid black;
-}
-
 .row {
   display: -ms-flexbox; 
   display: flex;
@@ -418,5 +357,3 @@ img.hover-shadow:not(.logo-container) {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-/* Updates */
