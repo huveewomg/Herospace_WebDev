@@ -37,14 +37,16 @@ $event_details = mysqli_fetch_row($result);
   }
   ?>
   <div id="row-1">
-    <div id="event-description"><?php echo $event_details[4]?></div>
+    <div id="event-description">
+      <p><?php echo $event_details[4]?></p>
+    </div>
     <div id="event-details">
-      <?php echo "Location: " . $event_details[9]?> <br> <br>
-      <?php echo "Organiser Email: " . $event_details[3]?> <br><br>
-      <?php echo "Date: " . $event_details[2]?> <br><br>
-      <?php echo "Start Time: " . $event_details[12]?> <br><br>
-      <?php echo "End Time: " . $event_details[13]?> <br><br>
-      <?php echo "Participation Fee: RM " . $event_details[6]?> <br><br>
+      <p class="event-info"><?php echo "Location: " . $event_details[9]?></p> <br> 
+      <p class="event-info"><?php echo "Organiser Email: " . $event_details[3]?></p> <br>
+      <p class="event-info"><?php echo "Date: " . $event_details[2]?></p> <br>
+      <p class="event-info"><?php echo "Start Time: " . $event_details[12]?></p> <br>
+      <p class="event-info"><?php echo "End Time: " . $event_details[13]?></p> <br>
+      <p class="event-info"><?php echo "Participation Fee: RM " . $event_details[6]?></p>
     </div>
   </div>
   <h1 id='event-imagetxt'>Event Image</h1>
@@ -88,7 +90,9 @@ $event_details = mysqli_fetch_row($result);
 
   <h1 id='requirement-txt'>Requirements</h1>
   <div id="row-3">
-    <div id="requirements"><?php echo $event_details[5]?></div>
+    <div id="requirements">
+      <p><?php echo $event_details[5]?></p>
+  </div>
   </div>
 
 

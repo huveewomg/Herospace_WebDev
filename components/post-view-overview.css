@@ -154,22 +154,35 @@ body {
 }
 
 #event-description {
-  background-color: aqua;
+  /* background-color: aqua; */
   float: left;
   width: 45%;
   height: 30vh;
   text-align: left;
   overflow: auto;
   line-height: 2;
+  border: 1px solid black;
+}
+
+#event-description p{
+  margin-left: 1vh;
+  margin-top: .5vh;
 }
 
 #event-details {
-  background-color: aqua;
+  /* background-color: aqua; */
   float: right;
   width: 45%;
   height: 30vh;
   text-align: left;
+  border: 1px solid black;
 }
+
+#event-details p{
+  margin-left: 1vh;
+  margin-top: .5vh;
+}
+
 
 #event-snipshot {
   margin-top: -30vh;
@@ -182,11 +195,17 @@ body {
 #requirements {
   margin-top: -50vh;
   height: 30vh;
-  background-color: aqua;
+  /* background-color: aqua; */
   text-align: left;
   overflow: auto;
   line-height: 1.5;
   margin-left: 5vh;
+  border: 1px solid black;
+}
+
+#requirements p{
+  margin-left: 1vh;
+  margin-top: .5vh;
 }
 
 
@@ -309,9 +328,12 @@ img:not(.logo-container):not(#logo-container img):not(.mySlides img) {
   object-fit: cover;
 }
 
+img:not(.logo-container):not(#logo-container img):not(.mySlides img):hover {
+  opacity: 1;
+}
 
 
-img:not(.logo-container):hover {
+img:hover {
   opacity: 1;
 }
 
@@ -326,7 +348,7 @@ img:not(.logo-container):hover {
   max-height: 100%;
 }
 
-img.hover-shadow:not(.logo-container) {
+img.hover-shadow:not(.logo-container):not(#logo-container img):not(.mySlides img) {
   transition: 0.3s;
 }
 
