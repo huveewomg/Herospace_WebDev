@@ -383,7 +383,7 @@ body {
 }
 
 
-img {
+img:not(.logo-container):not(#logo-container img) {
   width: 500px;
   height: 250px;
   margin-bottom: 0;
@@ -396,7 +396,7 @@ img {
 
 
 
-img:hover {
+img:not(.logo-container):hover {
   opacity: 1;
 }
 
@@ -411,7 +411,7 @@ img:hover {
   max-height: 100%;
 }
 
-img.hover-shadow {
+img.hover-shadow:not(.logo-container) {
   transition: 0.3s;
 }
 

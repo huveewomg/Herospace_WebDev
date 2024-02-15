@@ -22,8 +22,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 <link rel="stylesheet" href="about-us.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
 
   <body>
   <div class="scrollFade">
@@ -50,7 +49,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
       <div id="introduction">
         <h1 style="text-align: center;">The World Needs <span style="color: blue;">You</span></h1>
         <p>Helping others in Malaysia has never been easier. Herospace empowers you to make a difference with just a few clicks. This revolutionary platform connects passionate individuals like you with local communities in need, removing all the unnecessary barriers to volunteering. <br> <br>
-        No more sifting through endless websites or filling out lengthy forms. Simply sign up on Herospace, browse through a diverse range of meaningful projects, and choose one that sparks your passion. From cleaning up pristine beaches to teaching digital skills to underprivileged children, there's an opportunity for everyone. ><br>
+        No more sitting through endless websites or filling out lengthy forms. Simply sign up on Herospace, browse through a diverse range of meaningful projects, and choose one that sparks your passion. From cleaning up pristine beaches to teaching digital skills to underprivileged children, there's an opportunity for everyone. ><br>
         <ul>
           <li>Discover events across various states</li>
           <li>Connect directly with organizers and fellow volunteers.</li>
@@ -81,30 +80,30 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
         <strong>BOARD OF DIRECTORS</strong>
         <div>
           <div id="director-img-left">
-            <a href="https://github.com/zzSleepyCoderzz"><img id= timpfp src="https://avatars.githubusercontent.com/u/73248416?v=4" alt=""></a>
+            <a href="https://github.com/zzSleepyCoderzz"><img id= timpfp src="../assets/profile-pics/Lolman.png" alt=""></a>
           </div>
-          <div id="self-introduction-right">Lead Programmer</div>
+          <div id="self-introduction-right">Lead Developer</div>
         </div>
 
         <div>
           <div id="director-img-right">
-          <a href="https://github.com/huveewomg"><img id="wongpfp" src="../assets/img/test22.png" alt=""></a>
+          <a href="https://github.com/huveewomg"><img id="wongpfp" src="../assets/profile-pics/huvee.jpg" alt=""></a>
           </div>
-          <div id="self-introduction-left">demo text</div>
+          <div id="self-introduction-left">Test</div>
         </div>
       </div>
         <div>
         <div id="director-img-left" style='margin-left:5vw'>
-            <a href="https://github.com/spacemxchi"><img id="shanpfp" src="../assets/img/profile.png" alt=""></a>
+            <a href="https://github.com/spacemxchi"><img id="shanpfp" src="../assets/profile-pics/images.png" alt=""></a>
           </div>
-          <div id="self-introduction-right" style='margin-right:5vw ; width:76.5%'>test</div>
+          <div id="self-introduction-right" style='margin-right:5vw ; width:76.5%'>Test</div>
         </div>
 
         <div>
           <div id="director-img-right" style='margin-right:5vw'>
-          <a href="https://github.com/cookspaghetti"><img id="alexpfp" src="../assets/img/profile.png" alt=""></a>
+          <a href="https://github.com/cookspaghetti"><img id="alexpfp" src="../assets/profile-pics/images.png" alt=""></a>
           </div>
-            <div id="self-introduction-left" style='margin-left:5vw ; width:76.5%'>UI/UX Design</div>
+            <div id="self-introduction-left" style='margin-left:5vw ; width:76.5%'>Test</div>
           </div>
         <footer>
         <?php include 'footer.php'; ?>
