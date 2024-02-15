@@ -93,8 +93,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 
       // Display the results with a loop
       while ($row1 = $result->fetch_assoc()) {
-        echo "<script>console.log($row1)</script>";
-        echo "<div class='events scrollFade' onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\">" . $row1['event_name'] . "<br>" . $row1['event_desc'] . "<br>" . $row1['event_req'] . "</div>";
+        echo "<div id=\"main-column0\"><div class=\"center\"><div class=\"article-card\" onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\"><div class=\"content\"><p class=\"date\">Date: $row1[event_date]</p><p class=\"title\">$row1[event_name]</p></div><img src=\"../assets/event-images/$row1[event_name]/$row1[event_name]0.png\" alt=\"article-cover\" /></div></div>";
       }
 
       // Add pagination buttons if there are multiple pages
