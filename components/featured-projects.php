@@ -9,7 +9,7 @@ error_reporting(E_ERROR | E_PARSE);
 $selectedState = isset($_GET['state']) ? $_GET['state'] : '';
 
 //Modify the SQL query based on the criteria
-$sql = "SELECT * FROM `events` ORDER BY `event_fee` DESC";
+$sql = "SELECT * FROM `events`";
 if (!empty($_GET['state']) && !empty($_GET['date']) && !empty($_GET['fee'])) {
   $state = $_GET['state'];
   $date = $_GET['date'];
@@ -74,7 +74,12 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 
       $rows_per_page = 5; // Set the number of results per page
 
-      $total_rows = mysqli_num_rows($result); // Get the total number of rows
+      if (mysqli_num_rows($result) == 0) {
+        echo "No results found.";
+        return;
+      } else {
+        $total_rows = mysqli_num_rows($result);
+      }
 
       $num_pages = ceil($total_rows / $rows_per_page); // Calculate the number of pages
 
