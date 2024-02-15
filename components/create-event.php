@@ -2,8 +2,6 @@
 session_start();
 require('connection.php');
 
-$check_available = mysqli_query($connection, "SELECT available FROM events WHERE charityid = '$_SESSION[email]'");
-$availability = mysqli_fetch_row($check_available);
 ?>
 
 <!DOCTYPE html>
@@ -26,19 +24,6 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
     <div id="column-right">
       <div>Event Details</div>
       <div id="event-box">
-        <button id="<?php if ($availability[0] == 1) {
-                      echo "available";
-                    } else {
-                      echo "unavailable";
-                    } ?>" name="availability" value="<?php if ($availability[0] == 1) {
-                                                          echo "available";
-                                                        } else {
-                                                          echo "unavailable";
-                                                        } ?>" type="submit" form="create-event"><?php if ($availability[0] == 1) {
-                                                                              echo "Available";
-                                                                            } else {
-                                                                              echo "Unavailable";
-                                                                            } ?></button>
         <div id="ev-date">Event Date</div>
         <input type="date" id="ev-details" name="date" required><br><br>
         <div>Event Start Time</div>

@@ -63,7 +63,6 @@ h2 {
 
 /*Classes*/
 
-
 /*ID*/
 #loginBt {
   margin-top: 5vh;
@@ -164,11 +163,19 @@ h2 {
 }
 #stats p{
   font-size: 40px;
-  margin-top: 1vh;
 }
 
+#stats-arrow{
+  font-size: 36px;
+}
+
+#infinite{
+  margin-top: -5vh;
+  font-size: 35px;
+}
 
 #eventCounter{
+  margin-top: -5vh;
   font-size: 35px;
 }
 
