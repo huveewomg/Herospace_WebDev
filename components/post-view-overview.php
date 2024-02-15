@@ -156,5 +156,8 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </Script>
+  <footer>
+    <?php include 'footer.php'; ?>
+  </footer>
 </body>
 </html>

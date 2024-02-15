@@ -79,6 +79,9 @@ $row1 = $result1->fetch_assoc();
   </form>
 
   </div>
+  <footer>
+    <?php include 'footer.php'; ?>
+  </footer>
 </body>
 
 </html>
