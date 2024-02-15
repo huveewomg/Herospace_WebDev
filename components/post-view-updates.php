@@ -18,7 +18,9 @@ $result = $connection->query($sql);
 } else {
   include 'navbar.php';
 } ?>
+<link rel="stylesheet" href="post-view-updates.css" />
 <link rel="stylesheet" href="post-view.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 <body>
   <div id="post-view-navbar">
@@ -29,16 +31,50 @@ $result = $connection->query($sql);
     </ul>
   </div>
 
+
+  <!-- Remove the vertical line for the last update record -->
   <?php
+  $num_rows = $result->num_rows;
   if ($result->num_rows == 0) {
-    echo "<div> No Updates</div>";
-  }
-    while ($row1 = $result->fetch_assoc()) {
-      echo "<div>" . $row1['update_text'] . "<br>" . $row1['date'] . "<br></div>";
+    echo "<div class=\"card-no-updates\">
+    <div class=\"container-card bg-green-box\">
+        <p class=\"card-title\">No Updates Yet</p>
+    </div>
+</div>";
+  } else {
+    for ($i = 0; $i < $num_rows; $i++) {
+      // Fetch the current row
+      $row1 = $result->fetch_assoc();
+      // Check if the current row is the last one
+      if ($i == $num_rows - 1) {
+        // This is the last record
+        echo "<div class=\"row\">
+            <div id=\"alert-container-last\">
+                <span class=\"material-symbols-outlined\" id=\"alert\">priority_high</span>
+            </div>
+            <div class=\"card\">
+                <div class=\"container-card bg-green-box\">
+                    <p class=\"card-title\">" . $row1['date'] . "</p>
+                    <p class=\"card-description\">" . $row1['update_text'] . "</p>
+                </div>
+            </div>
+          </div>";
+      } else {
+        echo "<div class=\"row\">
+              <div id=\"alert-container\">
+                  <span class=\"material-symbols-outlined\" id=\"alert\">priority_high</span>
+              </div>
+              <div class=\"card\">
+                  <div class=\"container-card bg-green-box\">
+                      <p class=\"card-title\">" . $row1['date'] . "</p>
+                      <p class=\"card-description\">" . $row1['update_text'] . "</p>
+                  </div>
+              </div>
+            </div>";
+      }
     }
-
+  }
   ?>
-
 </body>
 
 </html>
