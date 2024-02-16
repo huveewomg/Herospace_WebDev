@@ -5,7 +5,7 @@
 }
 body {
   background-color: #ffffff;
-  font-family: "Raleway", sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 /*Fonts*/
@@ -151,16 +151,37 @@ body {
 }
 
 /* Director pic on the left and right */
+#self-introduction-left {
+  float: left;
+  border: 4px solid #333;
+  width: 85%;
+  height: 20vh;
+  margin-bottom: 3vh;
+  padding: 5px;
+}
+
+#self-introduction-left-p{
+  font-size: 24px;
+  font-family: Poppins, sans-serif;
+  font-weight: 800;
+}
+
+#job-title {
+  font-size: 24px;
+  font-family: Poppins, sans-serif;
+}
+
+
 #director-img-left {
   float: left;
   border-radius: 50%;
   width: 20vh;
   height: 20vh;
-  background-color: aqua;
   margin-bottom: 3vh;
   clear: left;
   cursor: pointer;
   overflow: hidden;
+  border: 4px solid #333;
 }
 
 #self-introduction-right {
@@ -169,27 +190,26 @@ body {
   width: 85%;
   height: 20vh;
   margin-bottom: 3vh;
+  padding: 5px;
+}
+
+#self-introduction-right-p{
+ font-size: 24px;
+ font-family: Poppins, sans-serif;
+ font-weight: 800;
 }
 
 #director-img-right {
+  border: 4px solid #333;
   float: right;
   border-radius: 50%;
   width: 20vh;
   height: 20vh;
-  background-color: rgb(255, 0, 183);
   margin-bottom: 3vh;
   clear: right;
   cursor: pointer;
   overflow: hidden;
   margin-left: -50px;
-}
-
-#self-introduction-left {
-  float: left;
-  border: 4px solid #333;
-  width: 85%;
-  height: 20vh;
-  margin-bottom: 3vh;
 }
 
 #timpfp {
@@ -215,4 +235,8 @@ body {
   width: 100%;
   height: auto;
   object-fit: fill;
+}
+
+#directors{
+  margin-top: 3vh;
 }
