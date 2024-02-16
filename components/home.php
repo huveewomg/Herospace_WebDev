@@ -48,10 +48,16 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
   include 'navbar.php';
 } ?>
 <link rel="stylesheet" href="homestyle.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
 
 <body>
   <div style="position: relative;">
-    <img id="home-cover" src="../assets/img/homepic.webp">
+    <div style="position: relative;">
+      <img id="home-cover" src="../assets/img/homepic.webp">
+      <span id='slogan'>Allowing anyone to be a hero with one click</span>
+    </div>
     <button id="host-event" onclick="window.location.href='<?php
                                                             if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
                                                               echo 'create-event.php';

@@ -101,7 +101,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 
         <div>
           <div id="director-img-right" style='margin-right:5vw'>
-          <a href="https://github.com/cookspaghetti"><img id="alexpfp" src="../assets/profile-pics/images.png" alt=""></a>
+          <a href="https://github.com/cookspaghetti"><img id="alexpfp" src="../assets/profile-pics/alex.jpg" alt=""></a>
           </div>
             <div id="self-introduction-left" style='margin-left:5vw ; width:76.5%'>Test</div>
           </div>

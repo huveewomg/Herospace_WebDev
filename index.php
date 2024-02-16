@@ -46,13 +46,11 @@ mysqli_close($connection);
       <div id="eventCounter">0</div>
 
       <p>KIDS HELPED</p>
-      <div id="infinite"><span id="stats-arrow" class="material-symbols-outlined">
-          trending_up
-        </span>
-        <div class="value" akhi="100000">0</div> 
-        <span id="stats-arrow"class="material-symbols-outlined">
-          trending_down
-        </span></div>
+      <div id="infinite">
+        <span id="stats-arrow" class="material-symbols-outlined">trending_up</span>
+        <span class="value" akhi="100000">0</span>
+        <span id="stats-arrow" class="material-symbols-outlined">trending_down</span>
+      </div>
     </div>
 
   </div>
