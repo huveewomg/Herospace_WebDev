@@ -6,7 +6,8 @@ require 'connection.php';
 
 $event_id = $_GET['event_id'];
 $result = mysqli_query($connection, "SELECT * FROM events WHERE event_id = '$event_id'");
-$event_details = mysqli_fetch_row($result);
+$event_details = mysqli_fetch_assoc($result);
+
 ?>
 
 
@@ -29,36 +30,41 @@ $event_details = mysqli_fetch_row($result);
       <li><a href="#" onclick="window.location='post-view-discussions.php?event_id=<?php echo $event_id;?>'">Discussion</a></li>
     </ul>
   </div>
-  <h1 id="event-name"><?php echo $event_details[1] ?></h1>
-  <a href="<?php echo $event_details[8]?>" target="_blank"><button id="join-event" on>Join Event</button></a>
+  <h1 id="event-name"><?php echo $event_details['event_name'] ?></h1>
   <?php 
-  if($_SESSION['status'] == 'charity'){
+  if($_SESSION['status'] == 'charity' && $event_details['charityid'] == $_SESSION['email']){
     echo "<a href='create-updates.php?event_id=$event_id'><button id='edit-event'>Edit Event</button></a>";
+  }
+  else if($_SESSION['status'] == 'volunteer'){
+    echo "<a href=\"<?php echo $event_details[signup_link]?>\" target=\"_blank\"><button id=\"join-event\" on>Join Event</button></a>";
+  }
+  else if($_SESSION['status'] == 'admin'){
+    echo "<a href='delete-event.php?event_id=$event_id'><button id='delete-event'>Delete Event</button></a>";
   }
   ?>
   <div id="row-1">
     <div id="event-description">
-      <p><?php echo $event_details[4]?></p>
+      <p><?php echo $event_details['event_desc']?></p>
     </div>
     <div id="event-details">
-      <p class="event-info"><?php echo "Location: " . $event_details[9]?></p> <br> 
-      <p class="event-info"><?php echo "Organiser Email: " . $event_details[3]?></p> <br>
-      <p class="event-info"><?php echo "Date: " . $event_details[2]?></p> <br>
-      <p class="event-info"><?php echo "Start Time: " . $event_details[12]?></p> <br>
-      <p class="event-info"><?php echo "End Time: " . $event_details[13]?></p> <br>
-      <p class="event-info"><?php echo "Participation Fee: RM " . $event_details[6]?></p>
+      <p class="event-info"><?php echo "Location: " . $event_details['event_state']?></p> <br> 
+      <p class="event-info"><?php echo "Organiser Email: " . $event_details['charityid']?></p> <br>
+      <p class="event-info"><?php echo "Date: " . $event_details['event_date']?></p> <br>
+      <p class="event-info"><?php echo "Start Time: " . $event_details['start_time']?></p> <br>
+      <p class="event-info"><?php echo "End Time: " . $event_details['end_time']?></p> <br>
+      <p class="event-info"><?php echo "Participation Fee: RM " . $event_details['event_fee']?></p>
     </div>
   </div>
   <h1 id='event-imagetxt'>Event Image</h1>
   <div id="row-2" class="flex-container">
     <div class="event-snipshot">
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>0.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+      <img src="../assets/event-images/<?php echo $event_details['event_name'];?>/<?php echo $event_details['event_name'];?>0.png"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
     </div>
     <div class="event-snipshot">
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>1.png"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+      <img src="../assets/event-images/<?php echo $event_details['event_name'];?>/<?php echo $event_details['event_name'];?>1.png"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
     </div>
     <div class="event-snipshot">
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>2.png"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      <img src="../assets/event-images/<?php echo $event_details['event_name'];?>/<?php echo $event_details['event_name'];?>2.png"  onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
     </div>
   </div>
 
@@ -91,7 +97,7 @@ $event_details = mysqli_fetch_row($result);
   <h1 id='requirement-txt'>Requirements</h1>
   <div id="row-3">
     <div id="requirements">
-      <p><?php echo $event_details[5]?></p>
+      <p><?php echo $event_details['event_req']?></p>
   </div>
   </div>
 

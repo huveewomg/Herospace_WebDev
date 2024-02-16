@@ -125,11 +125,33 @@ body {
   cursor: pointer; /* Cursor style on hover */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
   margin-top: -5vh;
-  margin-right: 5vh;
+  margin-right: 10vh;
 }
 
 #edit-event:hover {
   color: #00c25e;
+  background-color: #ffffff;
+  border: 2px solid black;
+}
+
+#delete-event {
+  float: right;
+  background-color: #ff0000; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size of the text */
+  font-family: "auraregular";
+  letter-spacing: 0.5px;
+  border: 2px solid #ff0000;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  margin-top: -5vh;
+  margin-right: 10vh;
+}
+
+#delete-event:hover {
+  color: #ff0000;
   background-color: #ffffff;
   border: 2px solid black;
 }
