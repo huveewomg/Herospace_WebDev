@@ -53,7 +53,7 @@
   <div class="footer">
     <div class="row">
       <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
-      <a href="https://www.instragram.com"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
       <a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a>
       <a href="https://www.x.com"><i class="fa fa-twitter"></i></a>
     </div>
