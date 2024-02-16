@@ -172,3 +172,32 @@ h1 {
 #dropdown{
   font-size: 14px;
 }
+
+/* Create Updates Page */
+
+#ev-updates{
+  width: 79vh;
+  text-align: left;
+  height: 20vh;
+  resize: none;
+  padding: 1vh;
+  border-width: 2px;
+  border-color: black;
+  font-size: 14px;
+}
+
+#updates-title{
+  width: 80vh;
+  font-family: "auraregular";
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: 1px; 
+  margin-top: 2vh;
+  text-overflow: ellipsis;
+}
+
+#updates-body{
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
