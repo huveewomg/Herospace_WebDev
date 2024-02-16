@@ -45,7 +45,7 @@ $row1 = $result1->fetch_assoc();
     while ($row = $result->fetch_assoc()) {
       echo "<div id='comment-box'><div id='comment'>" . $row['comment'] ."<p>" . $row['volunteer_id'];
         if ($_SESSION['status'] == 'admin') {
-          echo "<button id='delete-button' onclick='window.location=\"delete-event.php?comment_id=$row[comment_id]&event_id=$row[event_id]\"'>Delete Comment</button>";
+          echo "<button id='delete-button' onclick='window.location=\"delete-comment.php?comment_id=$row[comment_id]&event_id=$row[event_id]\"'>Delete Comment</button>";
         }
       echo  "</p></div>";
       

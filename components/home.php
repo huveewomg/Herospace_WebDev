@@ -115,7 +115,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
   <script src="homescript.js"></script>
 </body>
 
-<div style="margin-top: 130vh;">
+<div style="margin-top: 140vh;">
   <!-- Footer Component -->
   <?php include 'footer.php'; ?>
 </div>
