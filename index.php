@@ -48,7 +48,9 @@ mysqli_close($connection);
       <p>KIDS HELPED</p>
       <div id="infinite"><span id="stats-arrow" class="material-symbols-outlined">
           trending_up
-        </span> INFINITE <span id="stats-arrow"class="material-symbols-outlined">
+        </span>
+        <div class="value" akhi="100000">0</div> 
+        <span id="stats-arrow"class="material-symbols-outlined">
           trending_down
         </span></div>
     </div>
@@ -81,7 +83,30 @@ mysqli_close($connection);
         }, interval);
       }
       animateCounter(eventCount);
+
     });
+    // counter for kids helped
+    const counters = document.querySelectorAll('.value');
+    const speed = 750;
+
+    counters.forEach( counter => {
+      const animate = () => {
+          const value = +counter.getAttribute('akhi');
+          const data = +counter.innerText;
+        
+          const time = value / speed;
+        if(data < value) {
+              counter.innerText = Math.ceil(data + time);
+              setTimeout(animate, 1);
+            }else{
+              counter.innerText = value;
+            }
+        
+      }
+      
+      animate();
+    });
+
   </script>
 
 </body>

@@ -73,8 +73,10 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
   ?>
 
   </div>
-
+  <footer style='margin-top:5vh'>
   <?php include 'footer.php'; ?>
+  </footer>
+  
 
 </body>
 
