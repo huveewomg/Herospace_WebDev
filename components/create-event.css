@@ -27,7 +27,9 @@ body {
 }
 
 h1 {
+  font-size: 40px;
   margin-top: 5vh;
+  margin-bottom: 3vh;
   margin-left: 10vh;
 }
 
@@ -59,21 +61,25 @@ h1 {
 }
 
 #ev-date{
-  margin-top: 5vh;
+  margin-top: 2vh;
+  font-family: Poppins, sans-serif;
 }
-
+ 
 #ev-details {
   width: 60vh;
   text-align: center;
   border-width: 2px;
   border-color: black;
+  font-family: Poppins, sans-serif;
 }
 
 #ev-name {
-  width: 80vh;
+  width: 82vh;
   text-align: center;
   border-width: 2px;
   border-color: black;
+  font-family: Poppins, sans-serif;
+  padding: 1px;
 }
 
 #ev-desc {
@@ -87,16 +93,6 @@ h1 {
 }
 
 #ev-req {
-  width: 80vh;
-  text-align: left;
-  height: 20vh;
-  resize: none;
-  padding: 1vh;
-  border-width: 2px;
-  border-color: black;
-}
-
-#ev-updates {
   width: 80vh;
   text-align: left;
   height: 20vh;
@@ -161,4 +157,18 @@ h1 {
 
 #time-picker{
   margin-bottom: 2vh;
+}
+
+#input-title{
+  font-family: Poppins, sans-serif;
+}
+
+#input-title-details{
+  font-family: Poppins, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+#dropdown{
+  font-size: 14px;
 }
