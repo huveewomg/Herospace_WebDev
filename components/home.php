@@ -80,7 +80,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
         <h1>Latest Events</h1>
         <?php
         if ($result->num_rows == 0) {
-          echo "<div class='no-events scrollFade' onclick='window.location=\"home.php\"'>" . "No events listed under those tags.<br><br> Popular tags: beach, reforestation, river..." .
+          echo "<div class='no-events scrollFade' onclick='window.location=\"home.php\"'>" . "No events listed under those tags.<br><br> Popular tags: beach, reforestation, river...<br><br> Click to refresh this page." .
             "</div>";
         } else {
           $count = 0; // count number of posts

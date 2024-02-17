@@ -7,7 +7,7 @@ error_reporting(E_ERROR | E_PARSE);
 
 
 //Modify the SQL query based on the criteria
-$sql = "SELECT * FROM events";
+$sql = "SELECT * FROM events ORDER By date_created DESC;";
 $result = $connection->query($sql);
 ?>
 

@@ -39,37 +39,55 @@ body {
 }
 
 /*ID*/
-/* navbar */
-#post-view-navbar {
-  background-color: black;
-}
+
 #post-view-navbar > ul {
   list-style-type: none;
   margin-top: 0;
   padding-left: 10vh;
   border: none;
   overflow: hidden;
-  background-color: #858585;
+  background-color: #ffffff;
+  margin-top: 2vh;
 }
 
 #post-view-navbar > ul > li {
   float: left;
+  margin-right: 2vh;
+  color: #000000;
+  background-color: black;
+  border-radius: 3vh;
 }
 
 #post-view-navbar > ul > li a {
   display: block;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 3vh;
+  border: 2px solid #000000;
+  font-family: "Anta", sans-serif;
+  font-weight: bold;
 }
 
 #post-view-navbar > ul > li a:hover:not(.active) {
+  color: #000000;
   background-color: #ffffff;
+  
 }
 
 #post-view-navbar > ul > li a.active {
   background-color: #00e5fa;
+  border: 2px solid #00e5fa;
+  border-radius: 3vh;
+  transition: background-color 0.3s ease;
+  font-family: "Anta", sans-serif;
+}
+
+#post-view-navbar > ul > li a:hover.active {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 #event-name {
@@ -87,7 +105,7 @@ body {
 #requirement-txt{
   font-size: 48px;
   margin-left: 10vh;
-  margin-top: 5vh;
+  margin-top: -5vh;
 }
 
 #join-event {
@@ -157,7 +175,7 @@ body {
 }
 
 #row-1 {
-  padding: 10vh;
+  padding: 5vh 10vh 10vh 10vh;
   height: 30vh;
 }
 
@@ -171,38 +189,61 @@ body {
 
 #row-3 {
   padding: 5vh;
-  /* height: 50vh; */
   margin-top: 50vh;
 }
 
 #event-description {
-  /* background-color: aqua; */
-  float: left;
+  float: right;
   width: 45%;
-  height: 30vh;
+  height: 35vh;
   text-align: left;
   overflow: auto;
-  line-height: 2;
-  border: 1px solid black;
+  line-height: 3vh;
+  padding: 2vh 3vh 3vh 3vh;
+  background-color: #f2f2f2;
+  border-radius: 4vh;
+  font-family: Poppins, sans-serif;
+}
+
+#event-description::-webkit-scrollbar {
+  display: none;
 }
 
 #event-description p{
   margin-left: 1vh;
-  margin-top: .5vh;
+  margin-top: 0.5vh;
+}
+
+#event-description-title {
+  font-family: Poppins, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline; 
 }
 
 #event-details {
-  /* background-color: aqua; */
-  float: right;
+  float: left;
   width: 45%;
-  height: 30vh;
+  height: 35vh;
   text-align: left;
-  border: 1px solid black;
+  line-height: 2.5vh;
+  padding: 2vh 3vh 3vh 3vh;
+  background-color: #f2f2f2;
+  border-radius: 4vh;
+  font-family: Poppins, sans-serif;
 }
 
 #event-details p{
   margin-left: 1vh;
   margin-top: .5vh;
+}
+
+#event-details-title {
+  font-family: Poppins, sans-serif;
+  margin-bottom: 2vh;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline; 
 }
 
 
@@ -215,15 +256,24 @@ body {
 }
 
 #requirements {
-  margin-top: -50vh;
   height: 30vh;
-  /* background-color: aqua; */
-  text-align: left;
+  width: 95%;
   overflow: auto;
   line-height: 1.5;
   margin-left: 5vh;
-  border: 1px solid black;
+  margin-top: -50vh;
+  text-align: left;
+  overflow: auto;
+  padding: 2vh 3vh 3vh 3vh;
+  background-color: #f2f2f2;
+  border-radius: 4vh;
+  font-family: Poppins, sans-serif;
 }
+
+#requirements::-webkit-scrollbar {
+  display: none;
+}
+
 
 #requirements p{
   margin-left: 1vh;

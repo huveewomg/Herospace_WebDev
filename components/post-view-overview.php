@@ -21,6 +21,9 @@ $event_details = mysqli_fetch_assoc($result);
   include 'navbar.php';
 } ?>
 <link rel="stylesheet" href="post-view-overview.css" />
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
 
 <body>
 <div id="post-view-navbar" style="margin-bottom: 10vh;">
@@ -43,16 +46,18 @@ $event_details = mysqli_fetch_assoc($result);
   }
   ?>
   <div id="row-1">
-    <div id="event-description">
-      <p><?php echo $event_details['event_desc']?></p>
-    </div>
     <div id="event-details">
+      <p id="event-details-title"> EVENT DETAILS</p>
       <p class="event-info"><?php echo "Location: " . $event_details['event_state']?></p> <br> 
       <p class="event-info"><?php echo "Organiser Email: " . $event_details['charityid']?></p> <br>
       <p class="event-info"><?php echo "Date: " . $event_details['event_date']?></p> <br>
       <p class="event-info"><?php echo "Start Time: " . $event_details['start_time']?></p> <br>
       <p class="event-info"><?php echo "End Time: " . $event_details['end_time']?></p> <br>
       <p class="event-info"><?php echo "Participation Fee: RM " . $event_details['event_fee']?></p>
+    </div>
+    <div id="event-description">
+    <p id="event-description-title"> EVENT DESCRIPTION</p>
+      <p><?php echo $event_details['event_desc']?></p>
     </div>
   </div>
   <h1 id='event-imagetxt'>Event Image</h1>

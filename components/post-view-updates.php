@@ -21,6 +21,7 @@ $result = $connection->query($sql);
 <link rel="stylesheet" href="post-view-updates.css" />
 <link rel="stylesheet" href="post-view-overview.css" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
 <body>
   <div id="post-view-navbar">

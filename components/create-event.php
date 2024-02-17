@@ -15,6 +15,8 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 } ?>
 
 <link rel="stylesheet" href="create-event.css" />
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+
 
 <!-- Form to create new event -->
 
@@ -30,9 +32,9 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
         <input type="date" id="ev-details" name="date" required><br><br>
         <div id="input-title">Event Start Time</div>
         <div id="time-picker">
-          <input type="text" id="hour" name="startHour" size="2" maxlength="2">
+          <input type="text" id="hour" name="startHour" size="2" maxlength="2" pattern=^[0-2]+$>
           :
-          <input type="text" id="minute" name="startMinute" size="2" maxlength="2">
+          <input type="text" id="minute" name="startMinute" size="2" maxlength="2" pattern="[0-9]*">
           <select id="ampm" name="startampm">
             <option value="am">AM</option>
             <option value="pm">PM</option>
@@ -40,9 +42,9 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
         </div>
         <div id="input-title">Event End Time</div>
         <div id="time-picker">
-          <input type="text" id="hour" name="endHour" size="2" maxlength="2">
+          <input type="text" id="hour" name="endHour" size="2" maxlength="2" pattern=^[0-2]+$>
           :
-          <input type="text" id="minute" name="endMinute" size="2" maxlength="2">
+          <input type="text" id="minute" name="endMinute" size="2" maxlength="2" pattern="[0-9]*">
           <select id="ampm" name="endampm">
             <option value="am">AM</option>
             <option value="pm">PM</option>
@@ -95,14 +97,16 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
           ?>
         </select>
         <div id="input-title">Signup Link (Google Forms only)</div>
-        <input type="text" id="ev-details" name="link" pattern="https?:\/\/forms\.gle\/[A-Za-z0-9_-]+"><br><br>
+        <input type="link" id="ev-details" name="link" pattern="https?:\/\/forms\.gle\/[A-Za-z0-9_-]+" title="Please enter a valid Google Forms link"><br><br>
       </div>
+
+
     </div>
     <div id="column-left">
       <div id="ev-name">Event Name</div>
       <input type="text" id="ev-name" name="evname" maxlength="50"><br><br>
       <div id="input-title">Event Description</div>
-      <textarea id="ev-desc" name="evdesc" cols="30" rows="10"  placeholder="Tell us a little about this event..." required></textarea><br><br>
+      <textarea id="ev-desc" name="evdesc" cols="30" rows="10" placeholder="Tell us a little about this event..." required></textarea><br><br>
       <div id="input-title">Event Requirements</div>
       <textarea id="ev-req" name="evreq" cols="30" rows="10" placeholder="What is needed to be brought by participants for the event..." required></textarea><br><br>
       <div id="input-title">Event Images (Horizontal Images recommended, <strong>Only 3 Accepted</strong>)</div>
