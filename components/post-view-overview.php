@@ -80,17 +80,17 @@ $event_details = mysqli_fetch_assoc($result);
 
     <div class="mySlides">
       <div class="numbertext">1 / 3</div>
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>0.png" style="width:100%">
+      <img src="../assets/event-images/<?php echo $event_details['event_name'];?>/<?php echo $event_details['event_name'];?>0.png" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 3</div>
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>1.png" style="width:100%">
+      <img src="../assets/event-images/<?php echo $event_details['event_name'];?>/<?php echo $event_details['event_name'];?>1.png" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 3</div>
-      <img src="../assets/event-images/<?php echo $event_details[1];?>/<?php echo $event_details[1];?>2.png" style="width:100%">
+      <img src="../assets/event-images/<?php echo $event_details['event_name'];?>/<?php echo $event_details['event_name'];?>2.png" style="width:100%">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

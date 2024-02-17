@@ -33,7 +33,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
           <a href="https://github.com/zzSleepyCoderzz" target="_blank"><img id= timpfp src="https://avatars.githubusercontent.com/u/73248416?v=4" alt=""></a>
           <a href="https://github.com/huveewomg" target="_blank"><img id="wongpfp" src="../assets/profile-pics/huvee.jpg" alt=""></a>
           <img src="../assets/img/Logo.png" alt="" id="front-logo">
-          <a href="https://github.com/spacemxchi" target="_blank"><img id="shanpfp" src="../assets/profile-pics/images.png" alt=""></a>
+          <a href="https://github.com/spacemxchi" target="_blank"><img id="shanpfp" src="../assets/profile-pics/shan.jpg" alt=""></a>
           <a href="https://github.com/cookspaghetti" target="_blank"><img id="alexpfp" src="../assets/profile-pics/alex.jpg" alt=""></a>
         </div>
       </div>
