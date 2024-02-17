@@ -106,7 +106,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
         <a href="https://github.com/spacemxchi" target="_blank"><img id="shanpfp" src="../assets/profile-pics/images.png" alt=""></a>
       </div>
       <div id="self-introduction-right" style='margin-right:5vw ; width:76.5%'>
-        <p id="self-introduction-right-p">Shanjana Thareni a/p Jayamohan <br><p id="job-title">Operations Manager at Herospace, responsible for ensuring that Herospace runs effectively.</p></p>
+        <p id="self-introduction-right-p">Shanjana Thareni Jayamohan <br><p id="job-title">Operations Manager at Herospace, responsible for ensuring that Herospace runs effectively.</p></p>
       </div>
     </div>
 

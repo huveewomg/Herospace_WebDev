@@ -86,60 +86,60 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
     </div>
   </div>
   <div>
-    <?php
+  <?php
 
-    $rows_per_page = 5; // Set the number of results per page
+  $rows_per_page = 5; // Set the number of results per page
 
-    if (mysqli_num_rows($result) == 0) {
-      echo "<div id=\"main-column0\"><div class=\"center\"><div class=\"article-card\"><div class=\"content\"><p class=\"title\">No events found</p></div></div></div>";
-      return;
-    } else {
-      $total_rows = mysqli_num_rows($result);
+  if (mysqli_num_rows($result) == 0) {
+    echo "<div id=\"main-column0\"><div class=\"center\"><div class=\"article-card\"><div class=\"content\"><p class=\"title\">No events found</p></div></div></div>";
+    return;
+  } else {
+    $total_rows = mysqli_num_rows($result);
+  }
+
+  $num_pages = ceil($total_rows / $rows_per_page); // Calculate the number of pages
+
+  // Get the current page number from URL or use 1 as default
+  $current_page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+  // Check if total rows is less than 5
+  if ($total_rows > 5) {
+    $offset = ($current_page - 1) * $rows_per_page;
+    $sql = "SELECT * FROM events LIMIT $rows_per_page OFFSET $offset";
+    $result = $connection->query($sql); // Execute the modified query
+  }
+  // Modify original query with LIMIT and OFFSET based on page number
+
+
+  // Display the results with a loop
+  while ($row1 = $result->fetch_assoc()) {
+    echo "<div id=\"main-column0\"><div class=\"center\"><div class=\"article-card scrollFade\" onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\"><div class=\"content\"><p class=\"date\">Date: $row1[event_date]</p><p class=\"title\">$row1[event_name]</p></div><img src=\"../assets/event-images/$row1[event_name]/$row1[event_name]0.png\" alt=\"article-cover\" /></div></div>";
+  }
+
+
+  // Add pagination buttons if there are multiple pages
+  if ($num_pages > 1) {
+    echo "<div class='pagination'>";
+    // Previous button
+    if ($current_page > 1) {
+      echo "<a href='?page=" . ($current_page - 1) . "'>Previous</a>";
     }
-
-    $num_pages = ceil($total_rows / $rows_per_page); // Calculate the number of pages
-
-    // Get the current page number from URL or use 1 as default
-    $current_page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
-
-    // Check if total rows is less than 5, then only run this query
-    if ($total_rows > 5) {
-      $offset = ($current_page - 1) * $rows_per_page;
-      $sql = "SELECT * FROM events LIMIT $rows_per_page OFFSET $offset";
-      $result = $connection->query($sql); // Execute the modified query
-    }
-    // Modify your original query with LIMIT and OFFSET based on page number
-
-
-    // Display the results with a loop
-    while ($row1 = $result->fetch_assoc()) {
-      echo "<div id=\"main-column0\"><div class=\"center\"><div class=\"article-card\" onclick=\"window.location='post-view-overview.php?event_id=$row1[event_id]'\"><div class=\"content\"><p class=\"date\">Date: $row1[event_date]</p><p class=\"title\">$row1[event_name]</p></div><img src=\"../assets/event-images/$row1[event_name]/$row1[event_name]0.png\" alt=\"article-cover\" /></div></div>";
-    }
-
-
-    // Add pagination buttons if there are multiple pages
-    if ($num_pages > 1) {
-      echo "<div class='pagination'>";
-      // Previous button
-      if ($current_page > 1) {
-        echo "<a href='?page=" . ($current_page - 1) . "'>Previous</a>";
+    // Page numbers
+    for ($i = 1; $i <= $num_pages; $i++) {
+      if ($i == $current_page) {
+        echo "<a class='active' href='?page=$i'>$i</a>";
+      } else {
+        echo "<a href='?page=$i'>$i</a>";
       }
-      // Page numbers
-      for ($i = 1; $i <= $num_pages; $i++) {
-        if ($i == $current_page) {
-          echo "<a class='active' href='?page=$i'>$i</a>";
-        } else {
-          echo "<a href='?page=$i'>$i</a>";
-        }
-      }
-      // Next button
-      if ($current_page < $num_pages) {
-        echo "<a href='?page=" . ($current_page + 1) . "'>Next</a>";
-      }
-      echo "</div>";
     }
+    // Next button
+    if ($current_page < $num_pages) {
+      echo "<a href='?page=" . ($current_page + 1) . "'>Next</a>";
+    }
+    echo "</div>";
+  }
 
-    ?>
+  ?>
 
   </div>
   <script src="homescript.js"></script>

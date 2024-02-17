@@ -70,8 +70,9 @@ body {
   position: absolute; 
   width: 100%;
   top: 50%; 
-  margin-left: -37%; 
+  left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   font-size: 7vh;
   font-family: "Sen", sans-serif;
   font-optical-sizing: auto;  
