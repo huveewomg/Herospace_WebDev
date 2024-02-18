@@ -40,7 +40,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
 
   // Modify your original query with LIMIT and OFFSET based on page number
   $offset = ($current_page - 1) * $rows_per_page;
-  $sql = "SELECT * FROM events LIMIT $rows_per_page OFFSET $offset";
+  $sql = "SELECT * FROM `events` ORDER BY `events`.`event_id` DESC LIMIT $rows_per_page OFFSET $offset";
   $result = $connection->query($sql); // Execute the modified query
 
   // Display the results with a loop

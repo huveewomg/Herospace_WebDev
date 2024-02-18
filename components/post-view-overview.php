@@ -36,7 +36,7 @@ $event_details = mysqli_fetch_assoc($result);
   <h1 id="event-name"><?php echo $event_details['event_name'] ?></h1>
   <?php 
   if($_SESSION['status'] == 'charity' && $event_details['charityid'] == $_SESSION['email']){
-    echo "<a href='create-updates.php?event_id=$event_id'><button id='edit-event'>Edit Event</button></a>";
+    echo "<a href='create-updates.php?event_id=$event_id'><button id='edit-event'>Update Event</button></a>";
   }
   else if($_SESSION['status'] == 'volunteer'){
     echo "<a href=\"<?php echo $event_details[signup_link]?>\" target=\"_blank\"><button id=\"join-event\" on>Join Event</button></a>";

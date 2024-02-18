@@ -32,9 +32,9 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
         <input type="date" id="ev-details" name="date" required><br><br>
         <div id="input-title">Event Start Time</div>
         <div id="time-picker">
-          <input type="text" id="hour" name="startHour" size="2" maxlength="2" pattern=^[0-2]+$>
+          <input type="text" id="hour" name="startHour" size="2" maxlength="2" pattern="^0[1-9]|1[0-2]$">
           :
-          <input type="text" id="minute" name="startMinute" size="2" maxlength="2" pattern="[0-9]*">
+          <input type="text" id="minute" name="startMinute" size="2" maxlength="2" pattern="^([0-5][0-9])$">
           <select id="ampm" name="startampm">
             <option value="am">AM</option>
             <option value="pm">PM</option>
@@ -42,9 +42,9 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
         </div>
         <div id="input-title">Event End Time</div>
         <div id="time-picker">
-          <input type="text" id="hour" name="endHour" size="2" maxlength="2" pattern=^[0-2]+$>
+          <input type="text" id="hour" name="endHour" size="2" maxlength="2" pattern="^0[1-9]|1[0-2]$">
           :
-          <input type="text" id="minute" name="endMinute" size="2" maxlength="2" pattern="[0-9]*">
+          <input type="text" id="minute" name="endMinute" size="2" maxlength="2" pattern="^([0-5][0-9])$">
           <select id="ampm" name="endampm">
             <option value="am">AM</option>
             <option value="pm">PM</option>
