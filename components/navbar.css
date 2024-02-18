@@ -69,6 +69,7 @@
   margin-top: 1vh;
   width: 20%;
   height: 80%;
+  cursor: pointer;
 }
 
 #container {

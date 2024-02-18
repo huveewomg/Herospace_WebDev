@@ -8,7 +8,7 @@
   <div id="container">
     <nav>
       <div id="logo-container">
-        <img src="../assets/img/Logo.png" alt="" id="logo" />
+        <img src="../assets/img/Logo.png" alt="" id="logo" onclick="window.location='home.php'"/>
       </div>
       <ul>
         <li onclick="window.location='home.php'"><a href="#">Home</a></li>

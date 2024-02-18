@@ -136,7 +136,7 @@ div{
 
 /* after pressing register */
 .wrapper.active{
-  height:690px;
+  height:650px;
   transform: translateY(-100px);
 }
 

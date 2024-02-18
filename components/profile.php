@@ -75,6 +75,9 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
   </div>
 
 
+  <footer>
+    <?php include 'footer.php';?>
+  </footer>
 </body>
 
 </html>

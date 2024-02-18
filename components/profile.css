@@ -104,14 +104,14 @@ body {
 #column-left {
   float: left;
   width: 50%;
-  height: 50vh;
+  height: 70vh;
   text-align: left;
 }
 
 #column-right {
   float: right;
   width: 50%;
-  height: 50vh;
+  height: 70vh;
   text-align: left;
 }
 
