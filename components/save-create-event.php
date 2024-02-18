@@ -42,7 +42,6 @@ if (isset($_FILES['img']) && count($_FILES['img']['name']) >= 3) {
     }
 
     $result1 = mysqli_query($connection, "INSERT INTO events (event_id, event_name, event_date, charityid, event_desc, event_req, event_fee, event_tags, signup_link, event_state, start_time, end_time, date_created) VALUES ('$event_id' , '$evname', '$evdate', '$charityid', '$evdesc', '$evreq', $fee, '$tagsString', '$link', '$location', '$startTime', '$endTime', '$date_created');");
-
     if ($result1) {
         echo "<script>alert('Event added successfully!');window.location.href='create-event.php';</script>";
     } else {

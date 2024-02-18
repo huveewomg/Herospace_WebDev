@@ -65,24 +65,14 @@
     padding: 10vh;
   }
 
-  /* #column-right{
-    float: right;
-    width: 60%;
-    height: 90vh;
-    margin-bottom: 20vh;
-    margin-top: -10vh;
-    text-align: left;
-    padding: 10vh;
-  } */
-
   #sidebar{
     width: 27vh;
     height: auto;
-    /* background-color: #B4D4FF; */
     margin-left: 15vh;
     line-height: 3.5vh;
     border: 3px solid #000000;
     padding: 10px;
+    font-family: Poppins, sans-serif;
   }
 
   #sidebar .filter-txt {
