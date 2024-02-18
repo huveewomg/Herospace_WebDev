@@ -97,7 +97,7 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
           ?>
         </select>
         <div id="input-title">Signup Link (Google Forms only)</div>
-        <input type="link" id="ev-details" name="link" pattern="https?:\/\/forms\.gle\/[A-Za-z0-9_-]+" title="Please enter a valid Google Forms link"><br><br>
+        <input type="link" id="ev-details" name="link" pattern="https:\/\/forms\.gle\/[A-Za-z0-9_-]{6,64}" title="Please enter a valid Google Forms link"><br><br>
       </div>
 
 

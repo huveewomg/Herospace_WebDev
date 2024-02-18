@@ -1,5 +1,6 @@
 <?php
 include('components/connection.php');
+include('components/auto-delete.php');
 
 $sql = "SELECT COUNT(event_id) as eventCount FROM db_herospace.events";
 $result = mysqli_query($connection, $sql);
