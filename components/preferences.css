@@ -47,6 +47,7 @@
     margin-top: 2vh;
     border-radius: 10px;
     cursor: pointer;
+    font-family: Poppins, sans-serif;
   }
   
   /*ID*/
@@ -98,6 +99,7 @@
   #tag_column1{
     float: left;
     width: 30%;
+    
   }
 
   #tag_column2{

@@ -36,6 +36,8 @@ if (isset($_POST['preference'])) {
   include 'navbar.php';
 } ?>
 <link rel="stylesheet" href="preferences.css" />
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+
 
 <body>
   <div id="column-left">
@@ -73,7 +75,7 @@ if (isset($_POST['preference'])) {
       echo '<div id="tag_column1">';
       for ($i = 0; $i < $repeatCount; $i++) {
         if (in_array($tagContent[0][$i % count($tagContent[0])], $preferences)) {
-          echo '<button class="tag" style="background-color:red;" value= \'' . $tagContent[0][$i % count($tagContent[0])] . '\' name="preference" > ' . $tagContent[0][$i % count($tagContent[0])] . '</button>';
+          echo '<button class="tag" style="background-color:aqua;" value= \'' . $tagContent[0][$i % count($tagContent[0])] . '\' name="preference" > ' . $tagContent[0][$i % count($tagContent[0])] . '</button>';
         } else {
           echo '<button class="tag" value= \'' . $tagContent[0][$i % count($tagContent[0])] . '\' name="preference" > ' . $tagContent[0][$i % count($tagContent[0])] . '</button>';
         }
@@ -83,7 +85,7 @@ if (isset($_POST['preference'])) {
       echo '<div id="tag_column2">';
       for ($i = 0; $i < $repeatCount; $i++) {
         if (in_array($tagContent[1][$i % count($tagContent[1])], $preferences)) {
-          echo '<button class="tag" style="background-color:red;" value= \'' . $tagContent[1][$i % count($tagContent[1])] . '\' name="preference"> ' . $tagContent[1][$i % count($tagContent[1])] . '</button>';
+          echo '<button class="tag" style="background-color:aqua;" value= \'' . $tagContent[1][$i % count($tagContent[1])] . '\' name="preference"> ' . $tagContent[1][$i % count($tagContent[1])] . '</button>';
         } else {
           echo '<button class="tag" value= \'' . $tagContent[1][$i % count($tagContent[1])] . '\' name="preference"> ' . $tagContent[1][$i % count($tagContent[1])] . '</button>';
         }
@@ -93,7 +95,7 @@ if (isset($_POST['preference'])) {
       echo '<div id="tag_column3">';
       for ($i = 0; $i < $repeatCount; $i++) {
         if (in_array($tagContent[2][$i % count($tagContent[2])], $preferences)) {
-          echo '<button class="tag" style="background-color:red;" value= \'' . $tagContent[2][$i % count($tagContent[2])] . '\' name="preference"> ' . $tagContent[2][$i % count($tagContent[2])] . '</button>';
+          echo '<button class="tag" style="background-color:aqua;" value= \'' . $tagContent[2][$i % count($tagContent[2])] . '\' name="preference"> ' . $tagContent[2][$i % count($tagContent[2])] . '</button>';
         } else {
           echo '<button type="submit" class="tag" value= \'' . $tagContent[2][$i % count($tagContent[2])] . '\' name="preference"> ' . $tagContent[2][$i % count($tagContent[2])] . '</button>';
         }
