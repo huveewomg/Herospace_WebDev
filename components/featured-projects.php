@@ -18,19 +18,14 @@ if (!empty($_GET['state']) || !empty($_GET['date']) || !empty($_GET['fee'])) {
   // Default filter is by State, can filter by fee and date also
   if (!empty($_GET['state']) && !empty($_GET['date']) && !empty($_GET['fee'])) {
     $sql .= " WHERE event_state = '$state' AND event_date = '$date' AND event_fee = '$fee'";
-    echo $sql;
   } else if (!empty($_GET['state']) && !empty($_GET['date'])) {
     $sql .= " WHERE event_state = '$state' AND event_date = '$date'";
-    echo $sql;
   } else if (!empty($_GET['state']) && !empty($_GET['fee'])) {
     $sql .= " WHERE event_state = '$state' AND event_fee = '$fee'";
-    echo $sql;
   } else if (!empty($_GET['date']) && !empty($_GET['fee'])) {
     $sql .= " WHERE event_date = '$date' AND event_fee = '$fee'";
-    echo $sql;
   } else if (!empty($_GET['state'])) {
     $sql .= " WHERE event_state = '$state'";
-    echo $sql;
   } 
 }
 
