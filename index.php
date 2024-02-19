@@ -2,15 +2,23 @@
 include('components/connection.php');
 include('components/auto-delete.php');
 
-$sql = "SELECT COUNT(event_id) as eventCount FROM db_herospace.events";
-$result = mysqli_query($connection, $sql);
+//Get the number of events hosted based on the images stored
+$directory = 'C:\xampp\htdocs\WebDev\assets\event-images';
+$folderCount = 0;
 
-if ($result) {
-  $row = mysqli_fetch_assoc($result);
-  echo '<script>var eventCount = ' . $row['eventCount'] . ';</script>';
-} else {
+if (is_dir($directory)) {
+    $files = scandir($directory);
+    foreach ($files as $file) {
+        if (is_dir($directory . '/' . $file) && $file != '.' && $file != '..') {
+            $folderCount++;
+        }
+    }
+    echo '<script>var eventCount = ' . $folderCount . ';</script>';
+}
+else{
   echo '<script>var eventCount = 0;</script>';
 }
+
 
 mysqli_close($connection);
 ?>

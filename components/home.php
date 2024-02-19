@@ -7,8 +7,6 @@ require 'connection.php';
 //hide error messages
 error_reporting(E_ERROR | E_PARSE);
 
-$state = $_SESSION['state'];
-
 $sql = "SELECT * FROM events";
 $whereClause = ""; // Initialize the WHERE clause
 
@@ -101,9 +99,11 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
       <div id="column-left">
         <h1>Events from your area</h1>
         <?php
-        $state_sql = $connection->query("SELECT * FROM events WHERE event_state = '$state' ORDER BY event_id DESC LIMIT 3");
+        $user_state_sql = $connection->query("SELECT state FROM volunteer WHERE email = '$_SESSION[email]' ");
+        $user_state = $user_state_sql->fetch_assoc();
+        $state_sql = $connection->query("SELECT * FROM events WHERE event_state = '$user_state[state]' ORDER BY event_id DESC LIMIT 3");
 
-        if ($_SESSION['state'] == null || $state_sql->num_rows == 0) {
+        if ($user_state == null || $state_sql->num_rows == 0) {
           echo "<div class='no-events scrollFade'>" . "No events in your area.<br><br>Update your location in the Profile Page." .
             "</div>";
         } else {

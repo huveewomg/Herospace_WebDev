@@ -1,0 +1,57 @@
+Before Start make sure have 6 events in db
+
+1.Register
+jason
+jason@gmail.com
+a123456! (Can talk about the password validation)
+
+2.Login using the credentials above
+
+3.Once login
+- Explain on Events in area (need to change in edit profile)
+- Search for an event using the "orphanage" tag, search for an event using the "funni" tag to show if no event
+- Do profile edit (information, password (can showcase error handling) then preferences
+
+4.Go back to Homepage
+- Press into any events 
+- Showcase (image,updates,discussion and then press join) 
+- Show the host an event button
+
+5. Featured Projects/ Recent Posts (Let tim handle here)
+- Show Filter (can yap on how the filter works)
+Input : RM 40 , Negeri Sembilan
+- Press into the post and show it works
+- Show Recent Posts page, talk about the different queries
+
+6. Login as Charity Organizer
+onelovecharity@gmail.com
+onelove
+- Press host an event 
+- Maluri Community Cleanup
+- We will be painting any community buildings which have peeling or faded paint, planting trees in open spaces to help regulate temperatures and beautify our town, and also pick-up any trash along the way.
+- You will need to be dressed in sports attire and bring enough water to stay hydrated.
+- 01/03/2024
+- 10:00 am - 6:00 pm
+- Kuala Lumpur
+- 0
+- cleanup, reforestation, education
+- https://forms.gle/MGCUjS15izkJFSW99 
+(signup link)
+- Use image from the folder
+- Create an update for the post: Gloves will be provided!
+- Logout
+
+7. Login as Admin
+admin@gmail.com 
+autistic
+- Delete a comment 
+- Delete a post
+
+
+8. About Us
+- Can press on board of directors if time allows
+- Logout
+
+If he ask for aditional feature we can just yap on the point:
+- The delete event based on date
+- Terms and condition
