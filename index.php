@@ -3,7 +3,7 @@ include('components/connection.php');
 include('components/auto-delete.php');
 
 //Get the number of events hosted based on the images stored
-$directory = 'C:\xampp\htdocs\WebDev\assets\event-images';
+$directory = 'assets/event-images';
 $folderCount = 0;
 
 if (is_dir($directory)) {
