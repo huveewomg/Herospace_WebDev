@@ -15,8 +15,8 @@ $result1 = mysqli_query($connection, "DELETE FROM events WHERE event_id = '$even
 $result2 = mysqli_query($connection, "DELETE FROM updates WHERE event_id = '$event_id';");
 
 if ($result && $result1 && $result2) {
-    echo "<script>alert('Event deleted successfully!');window.location.href='featured-projects.php';</script>";
+    echo "<script>alert('Event deleted successfully!');window.location.href='featured-projects.php?date=&fee=&state=';</script>";
 } else {
-    echo "<script>alert('Delete Event failed!');window.location.href='featured-projects.php';</script>";
+    echo "<script>alert('Delete Event failed!');window.location.href='featured-projects.php?date=&fee=&state=';</script>";
 }
 ?>

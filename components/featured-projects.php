@@ -131,9 +131,9 @@ if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'charity') {
       // Page numbers
       for ($i = 1; $i <= $num_pages; $i++) {
         if ($i == $current_page) {
-          echo "<a class='active' href='?page=$i'>$i</a>";
+          echo "<a class='active' href='?page=$i?date=&fee=&state='>$i</a>";
         } else {
-          echo "<a href='?page=$i'>$i</a>";
+          echo "<a href='?page=$i?date=&fee=&state='>$i</a>";
         }
       }
       // Next button
