@@ -29,8 +29,7 @@ if (!empty($_GET['state']) || !empty($_GET['date']) || ($_GET['fee'] == 0 || $_G
     $sql .= " WHERE event_state = '$state'";
   } else if (!empty($_GET['date'])) {
     $sql .= " WHERE event_date = '$date'";
-  } 
-
+  }
   // Need to check if fee is 0, not null or empty then only filter by price
   else if (($_GET['fee'] == 0 || $_GET['fee'] != null) || !empty($_GET['fee'])) {
     $sql .= " WHERE event_fee = '$fee'";

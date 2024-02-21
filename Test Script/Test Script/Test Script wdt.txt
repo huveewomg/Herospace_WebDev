@@ -1,13 +1,13 @@
 Before Start make sure have 6 events in db
 
-1.Register
+1.Register (Wong)
 jason
 jason@gmail.com
 a123456! (Can talk about the password validation)
 
 2.Login using the credentials above
 
-3.Once login
+3.Once login (Tim)
 - Explain on Events in area (need to change in edit profile)
 - Search for an event using the "orphanage" tag, search for an event using the "funni" tag to show if no event
 - Do profile edit (information, password (can showcase error handling) then preferences
@@ -23,7 +23,7 @@ Input : RM 40 , Negeri Sembilan
 - Press into the post and show it works
 - Show Recent Posts page, talk about the different queries
 
-6. Login as Charity Organizer
+6. Login as Charity Organizer (Shan)
 onelovecharity@gmail.com
 onelove
 - Press host an event 
@@ -41,7 +41,7 @@ onelove
 - Create an update for the post: Gloves will be provided!
 - Logout
 
-7. Login as Admin
+7. Login as Admin (Alex)
 admin@gmail.com 
 autistic
 - Delete a comment 
