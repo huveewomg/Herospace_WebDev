@@ -9,3 +9,6 @@
   <li>Client-Side Form Validation</li>
 </ul>
 
+<p>
+  Frontend Design is done by @cookspaghetti.
+</p>
